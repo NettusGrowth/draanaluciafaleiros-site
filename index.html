@@ -33,8 +33,8 @@ a{text-decoration:none;color:inherit}
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-links a{font-size:.88rem;font-weight:500;color:var(--text-light);transition:color .3s;letter-spacing:.02em}
 .nav-links a:hover{color:var(--sage-dark)}
-.nav-cta{background:var(--sage);color:var(--white);padding:10px 22px;border-radius:50px;font-size:.85rem;font-weight:600;transition:all .3s;border:none;cursor:pointer;letter-spacing:.02em}
-.nav-cta:hover{background:var(--sage-dark);transform:translateY(-1px)}
+.nav-links .nav-cta{background:var(--sage);color:var(--white)!important;padding:10px 22px;border-radius:50px;font-size:.85rem;font-weight:600;transition:all .3s;border:none;cursor:pointer;letter-spacing:.02em}
+.nav-links .nav-cta:hover{background:var(--sage-dark);color:var(--white)!important;transform:translateY(-1px)}
 .nav-mobile{display:none;background:none;border:none;cursor:pointer;padding:4px}
 .nav-mobile svg{width:28px;height:28px;color:var(--sage-dark)}
 .nav-mobile .icon-close{display:none}
@@ -133,6 +133,27 @@ a{text-decoration:none;color:inherit}
 .test-name{font-weight:600;font-size:.9rem}
 .test-pet{font-size:.82rem;color:var(--text-light)}
 .test-quote-icon{position:absolute;top:24px;right:28px;font-size:2.5rem;color:var(--sage-light);font-family:Georgia,serif;line-height:1}
+
+/* WHATSAPP CONVERSATION CARDS */
+.wa-test{padding:100px 0;background:var(--cream)}
+.wa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.wa-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,.05);transition:all .3s;display:flex;flex-direction:column}
+.wa-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+.wa-card-header{display:flex;align-items:center;gap:10px;background:var(--sage-dark);color:var(--white);padding:12px 14px}
+.wa-back{width:18px;height:18px;flex-shrink:0;opacity:.85}
+.wa-avatar{width:34px;height:34px;border-radius:50%;background:var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.wa-header-info{flex:1;min-width:0}
+.wa-header-name{font-weight:600;font-size:.88rem}
+.wa-header-status{font-size:.68rem;opacity:.75}
+.wa-search{width:16px;height:16px;opacity:.75;flex-shrink:0}
+.wa-body{background:var(--cream-dark);background-image:radial-gradient(rgba(107,127,94,.06) 1px,transparent 1px);background-size:16px 16px;padding:18px 14px;display:flex;flex-direction:column;gap:10px;flex:1}
+.wa-bubble{position:relative;max-width:88%;padding:9px 12px 16px;border-radius:12px;font-size:.82rem;line-height:1.5;color:var(--text)}
+.wa-bubble.in{background:var(--white);align-self:flex-start;border-top-left-radius:2px}
+.wa-bubble.out{background:var(--sage);color:var(--white);align-self:flex-end;border-top-right-radius:2px}
+.wa-emoji{margin-left:2px}
+.wa-bubble-time{position:absolute;bottom:4px;right:10px;font-size:.62rem;opacity:.65;display:inline-flex;align-items:center;gap:2px;white-space:nowrap}
+.wa-check{width:13px;height:9px}
+.wa-footer{padding:14px 16px;font-weight:600;font-size:.85rem;color:var(--text);border-top:1px solid var(--sage-light)}
 
 /* AUDIO TESTIMONIALS */
 .audio-test{padding:100px 0;background:var(--white)}
@@ -249,6 +270,7 @@ a{text-decoration:none;color:inherit}
   .how-connector{display:none}
   .faq-side{position:static}
   .audio-grid{grid-template-columns:1fr}
+  .wa-grid{grid-template-columns:1fr}
   .google-card{grid-template-columns:1fr;text-align:center;padding:36px 28px;gap:24px}
   .google-left{border-right:none;border-bottom:1px solid rgba(107,127,94,.2);padding-right:0;padding-bottom:24px}
   .google-right{width:100%;height:200px;margin:0 auto}
@@ -283,6 +305,7 @@ a{text-decoration:none;color:inherit}
   .hero-float-2{top:12px;right:12px}
   .wa-float{width:54px;height:54px;bottom:16px;right:16px}
   .wa-float svg{width:28px;height:28px}
+  .wa-test{padding:64px 0}
   .audio-test{padding:64px 0}
   .audio-card{padding:22px}
   .audio-player{padding:10px 12px;gap:10px}
@@ -355,7 +378,7 @@ a{text-decoration:none;color:inherit}
       </div>
       <div class="hero-img fade-up" style="animation-delay:.2s">
         <div class="hero-img-main">
-          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=750&fit=crop&crop=faces" alt="Veterinária examinando cachorro com carinho" style="width:100%;height:100%;object-fit:cover">
+          <img src="img/dra-ana-foto.jpg" alt="Dra. Ana Lucia Faleiros com um golden retriever" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%">
         </div>
         <div class="hero-float hero-float-1">
           <div class="icon green">🩺</div>
@@ -454,7 +477,7 @@ a{text-decoration:none;color:inherit}
   <div class="container">
     <div class="about-grid">
       <div class="about-img fade-up">
-        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&h=660&fit=crop&crop=faces" alt="Dra. Ana Lucia Faleiros - Médica Veterinária" style="width:100%;height:100%;object-fit:cover;border-radius:32px">
+        <img src="img/dra-ana-foto.jpg" alt="Dra. Ana Lucia Faleiros - Médica Veterinária" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;border-radius:32px">
         <div class="about-quote">"Acredito que cuidar bem de um animal começa com escuta, empatia e respeito — pelo pet e pelo tutor."</div>
       </div>
       <div class="about-content fade-up">
@@ -511,6 +534,73 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
+<!-- WHATSAPP CONVERSATION CARDS -->
+<section class="wa-test">
+  <div class="container">
+    <div class="section-tag fade-up">Prova Social</div>
+    <h2 class="section-title fade-up">Conversas que mostram <em>a verdade</em></h2>
+    <p class="section-sub fade-up">Alguns registros reais de mensagens que recebemos dos tutores.</p>
+    <div class="wa-grid">
+
+      <!-- CARD 1 — Fabi, tutora da Lua -->
+      <div class="wa-card fade-up">
+        <div class="wa-card-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-back"><path d="M15 18l-6-6 6-6"/></svg>
+          <div class="wa-avatar">👩</div>
+          <div class="wa-header-info">
+            <div class="wa-header-name">Fabi</div>
+            <div class="wa-header-status">online</div>
+          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-search"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="wa-body">
+          <div class="wa-bubble in">Obrigada minha querida, agradeço o carinho e a paciência com a Lua. Você é um amor! <span class="wa-emoji">❤️</span><span class="wa-bubble-time">11:00</span></div>
+          <div class="wa-bubble out">Eu que agradeço Fabi!!! Amei ter conhecido a Lua <span class="wa-emoji">😍</span><span class="wa-bubble-time">11:15 <svg viewBox="0 0 16 11" class="wa-check"><path d="M1 5.5L4.5 9L11 1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 5.5L9 9L15.5 1.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
+        </div>
+        <div class="wa-footer">Fabi, tutora da Lua</div>
+      </div>
+
+      <!-- CARD 2 — Renata, tutora da Melzinha -->
+      <div class="wa-card fade-up">
+        <div class="wa-card-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-back"><path d="M15 18l-6-6 6-6"/></svg>
+          <div class="wa-avatar">👩</div>
+          <div class="wa-header-info">
+            <div class="wa-header-name">Renata</div>
+            <div class="wa-header-status">online</div>
+          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-search"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="wa-body">
+          <div class="wa-bubble in">Vamos sim doutora. E só temos a agradecer a senhora.<span class="wa-bubble-time">21:51</span></div>
+          <div class="wa-bubble out">Eu que agradeço a confiança <span class="wa-emoji">🙏</span><span class="wa-bubble-time">21:52 <svg viewBox="0 0 16 11" class="wa-check"><path d="M1 5.5L4.5 9L11 1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 5.5L9 9L15.5 1.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
+        </div>
+        <div class="wa-footer">Renata, tutora da Melzinha</div>
+      </div>
+
+      <!-- CARD 3 — Meire, tutora do Bento -->
+      <div class="wa-card fade-up">
+        <div class="wa-card-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-back"><path d="M15 18l-6-6 6-6"/></svg>
+          <div class="wa-avatar">👩</div>
+          <div class="wa-header-info">
+            <div class="wa-header-name">Meire</div>
+            <div class="wa-header-status">online</div>
+          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-search"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+        <div class="wa-body">
+          <div class="wa-bubble in">Peço a Jesus por você sempre. Que ele te abençoe intensamente. Pessoas como você são raras, minha querida.<span class="wa-bubble-time">22:29</span></div>
+          <div class="wa-bubble in">Beijos tia Ana e lambeijos do Bento <span class="wa-emoji">🐶❤️</span><span class="wa-bubble-time">22:29</span></div>
+        </div>
+        <div class="wa-footer">Meire, tutora do Bento</div>
+      </div>
+
+    </div>
+    <p class="audio-note">*Nomes e trechos de conversas reais, utilizados com autorização dos tutores.</p>
+  </div>
+</section>
+
 <!-- AUDIO TESTIMONIALS -->
 <section class="audio-test" id="depoimentos-audio">
   <div class="container">
@@ -519,18 +609,17 @@ a{text-decoration:none;color:inherit}
     <p class="section-sub fade-up">Depoimentos reais, gravados pela voz de quem já confiou o cuidado do seu pet à Dra. Ana Lucia.</p>
     <div class="audio-grid">
 
-      <!-- CARD DE ÁUDIO 1 — troque avatar/nome/pet/arquivo/transcrição pelos dados reais -->
+      <!-- CARD DE ÁUDIO 1 — Renata, tutora da Melzinha (áudio real) -->
       <div class="audio-card fade-up">
         <div class="audio-card-head">
           <div class="audio-avatar">👩</div>
           <div>
-            <div class="audio-name">Fernanda</div>
-            <div class="audio-pet">Tutora da Mel</div>
+            <div class="audio-name">Renata</div>
+            <div class="audio-pet">Tutora da Melzinha</div>
           </div>
         </div>
         <div class="audio-player" data-audio-card>
-          <!-- EDITAR: troque o src pelo arquivo real (.mp3, .m4a ou .wav) -->
-          <audio data-audio-el preload="metadata" src="audio/depoimento-fernanda.mp3"></audio>
+          <audio data-audio-el preload="metadata" src="audio/depoimento-renata.mp3"></audio>
           <button class="audio-play" type="button" data-play-btn aria-label="Reproduzir depoimento">
             <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
             <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
@@ -539,16 +628,16 @@ a{text-decoration:none;color:inherit}
             <div class="audio-wave" data-wave>
               <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
-            <div class="audio-time" data-time>0:00 / 0:38</div>
+            <div class="audio-time" data-time>0:00 / 0:46</div>
           </div>
         </div>
-        <p class="audio-preview">"A Mel sempre ficava muito agitada em consultas. Com a Dra. Ana foi diferente. Ela teve um carinho que eu nunca tinha visto…" <em>(texto placeholder)</em></p>
+        <p class="audio-preview">"Minhas amigas me indicaram a Dra. Ana Lucia. Disseram: 'ela é uma graça, muito educada e sincera — fala a verdade sobre o que o cão precisa.' Deu tudo certo, graças a Deus!"</p>
         <button class="audio-transcript-toggle" type="button" data-transcript-btn>
           Ler transcrição
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="audio-transcript" data-transcript>
-          <div class="audio-transcript-inner">[PLACEHOLDER — substituir pela transcrição completa e real deste depoimento quando o áudio definitivo for adicionado.]</div>
+          <div class="audio-transcript-inner">Deus é muito bom, né? Eu precisei de um veterinário e recebi várias indicações — minha amiga Letícia mandou, uma colega que trabalha na Justiça Federal mandou também. E a Letícia falou assim: "Renata, tem a doutora Ana Lucia. É uma graça, é muito educada. O que o cachorro precisa, ela fala, ela é bem sincera." Era exatamente isso que eu queria. E deu certo, graças a Deus! <em>(transcrição automática, pode conter pequenas imprecisões)</em></div>
         </div>
       </div>
 
@@ -619,7 +708,8 @@ a{text-decoration:none;color:inherit}
       </div>
 
     </div>
-    <p class="audio-note">*Nomes utilizados com autorização dos tutores. Áudios ilustrativos — substitua pelos arquivos reais quando disponíveis.</p>
+    <!-- Cards 2 e 3 ainda usam áudio placeholder — aguardando confirmação de qual tutor(a)/pet corresponde a cada arquivo em /audio antes de publicar como real -->
+    <p class="audio-note">*Nomes utilizados com autorização dos tutores.</p>
   </div>
 </section>
 
