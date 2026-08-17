@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dra. Ana Lucia Faleiros | Veterinária em Uberaba - Atendimento Humanizado</title>
-<meta name="description" content="Dra. Ana Lucia Faleiros — Médica veterinária em Uberaba. Atendimento humanizado, com carinho e atenção exclusiva para seu pet. Agende pelo WhatsApp.">
+<meta name="description" content="Dra. Ana Lucia Faleiros, médica veterinária em Uberaba. Atendimento humanizado, com carinho e atenção exclusiva para seu pet. Agende pelo WhatsApp.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -123,7 +123,10 @@ a{text-decoration:none;color:inherit}
 /* TESTIMONIALS */
 .testimonials{padding:100px 0;background:var(--sage-light)}
 .testimonials .section-tag{background:var(--white)}
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.test-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.test-dots{display:none;justify-content:center;gap:8px;margin-top:24px}
+.test-dots span{width:8px;height:8px;border-radius:50%;background:var(--sage-muted);transition:all .3s;cursor:pointer}
+.test-dots span.active{background:var(--sage);width:22px;border-radius:5px}
 .test-card{background:var(--white);border-radius:var(--radius);padding:32px;position:relative;transition:all .3s}
 .test-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.06)}
 .test-stars{color:var(--gold-star);font-size:1.1rem;margin-bottom:16px;letter-spacing:2px}
@@ -264,13 +267,17 @@ a{text-decoration:none;color:inherit}
   .hero-grid,.about-grid,.faq-grid{grid-template-columns:1fr}
   .hero-img{order:-1}
   .hero-img-main{aspect-ratio:16/10}
-  .problems-grid,.services-grid,.test-grid,.how-grid{grid-template-columns:1fr 1fr}
+  .problems-grid,.services-grid,.how-grid{grid-template-columns:1fr 1fr}
   .trust-grid{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:1fr 1fr}
   .how-connector{display:none}
   .faq-side{position:static}
   .audio-grid{grid-template-columns:1fr}
   .wa-grid{grid-template-columns:1fr}
+  .test-grid{display:flex;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;gap:20px;margin-top:40px;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .test-grid::-webkit-scrollbar{display:none}
+  .test-grid .test-card{flex:0 0 82%;scroll-snap-align:center}
+  .test-dots{display:flex}
   .google-card{grid-template-columns:1fr;text-align:center;padding:36px 28px;gap:24px}
   .google-left{border-right:none;border-bottom:1px solid rgba(107,127,94,.2);padding-right:0;padding-bottom:24px}
   .google-right{width:100%;height:200px;margin:0 auto}
@@ -291,7 +298,7 @@ a{text-decoration:none;color:inherit}
   .nav-links a:not(.nav-cta):last-of-type{border-bottom:none}
   .nav-links .nav-cta{margin-top:14px;text-align:center;padding:14px 22px;font-size:.92rem}
   .nav-mobile{display:block}
-  .problems-grid,.services-grid,.test-grid,.how-grid,.trust-grid{grid-template-columns:1fr}
+  .problems-grid,.services-grid,.how-grid,.trust-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .hero-btns{flex-direction:column;align-items:flex-start}
   .hero-trust{flex-direction:column;gap:12px}
@@ -305,6 +312,7 @@ a{text-decoration:none;color:inherit}
   .hero-float-2{top:12px;right:12px}
   .wa-float{width:54px;height:54px;bottom:16px;right:16px}
   .wa-float svg{width:28px;height:28px}
+  .test-grid .test-card{flex:0 0 88%}
   .wa-test{padding:64px 0}
   .audio-test{padding:64px 0}
   .audio-card{padding:22px}
@@ -350,7 +358,7 @@ a{text-decoration:none;color:inherit}
           Atendimento Humanizado
         </div>
         <h1>Cuidado veterinário com <span>carinho e atenção</span> em Uberaba</h1>
-        <p class="hero-sub">Dra. Ana Lucia Faleiros — consultas, vacinas e acompanhamento para seu pet em um ambiente tranquilo, com o tempo e a dedicação que ele merece.</p>
+        <p class="hero-sub">Dra. Ana Lucia Faleiros: consultas, vacinas e acompanhamento para seu pet em um ambiente tranquilo, com o tempo e a dedicação que ele merece.</p>
         <div class="hero-btns">
           <a href="https://wa.me/5534999007306?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20meu%20pet." class="btn-primary">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -456,7 +464,7 @@ a{text-decoration:none;color:inherit}
       <div class="service-card fade-up">
         <div class="service-icon">🏠</div>
         <h3>Atendimento Domiciliar</h3>
-        <p>Seu pet atendido no conforto de casa — ideal para quem tem dificuldade de deslocamento.</p>
+        <p>Seu pet atendido no conforto de casa, ideal para quem tem dificuldade de deslocamento.</p>
       </div>
       <div class="service-card fade-up">
         <div class="service-icon">🥗</div>
@@ -478,19 +486,19 @@ a{text-decoration:none;color:inherit}
     <div class="about-grid">
       <div class="about-img fade-up">
         <img src="img/dra-ana-foto.jpg" alt="Dra. Ana Lucia Faleiros - Médica Veterinária" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;border-radius:32px">
-        <div class="about-quote">"Acredito que cuidar bem de um animal começa com escuta, empatia e respeito — pelo pet e pelo tutor."</div>
+        <div class="about-quote">"Acredito que cuidar bem de um animal começa com escuta, empatia e respeito, tanto pelo pet quanto pelo tutor."</div>
       </div>
       <div class="about-content fade-up">
         <div class="section-tag">Sobre Mim</div>
         <h2>Conheça a <span>Dra. Ana Lucia</span> Faleiros</h2>
-        <p class="about-text">Sou médica-veterinária apaixonada por animais e por pessoas. Decidi criar um espaço de atendimento onde cada pet recebe o tempo e a atenção que merece — sem pressa, sem produção em massa.</p>
+        <p class="about-text">Sou médica-veterinária apaixonada por animais e por pessoas. Decidi criar um espaço de atendimento onde cada pet recebe o tempo e a atenção que merece, sem pressa e sem produção em massa.</p>
         <p class="about-text">Minha missão é oferecer um cuidado veterinário verdadeiramente humanizado: onde o tutor se sente acolhido, o pet se sente seguro, e a saúde é tratada de forma completa e individualizada.</p>
         <div class="about-stats">
           <div class="about-stat"><div class="val">500+</div><div class="lbl">Pets atendidos</div></div>
           <div class="about-stat"><div class="val">100%</div><div class="lbl">Dedicação</div></div>
           <div class="about-stat"><div class="val">5.0</div><div class="lbl">Avaliação Google</div></div>
         </div>
-        <div class="about-crmv">🎓 CRMV-MG Ativo — Médica Veterinária</div>
+        <div class="about-crmv">🎓 CRMV-MG Ativo · Médica Veterinária</div>
       </div>
     </div>
   </div>
@@ -502,34 +510,46 @@ a{text-decoration:none;color:inherit}
     <div class="section-tag fade-up">Depoimentos</div>
     <h2 class="section-title fade-up">O que dizem os <em>tutores</em></h2>
     <p class="section-sub fade-up">A confiança de quem já passou pelo nosso atendimento é a melhor recomendação.</p>
-    <div class="test-grid">
+    <div class="test-grid" data-carousel>
       <div class="test-card fade-up">
         <div class="test-quote-icon">"</div>
         <div class="test-stars">★★★★★</div>
-        <p class="test-text">A Dra. Ana Lucia foi incrível com a Luna. Explicou tudo com muita paciência e a Luna ficou super tranquila durante toda a consulta. Recomendo de olhos fechados!</p>
+        <p class="test-text">Essa titia Ana Lúcia é um amor!</p>
         <div class="test-author">
           <div class="test-avatar">🐕</div>
-          <div><div class="test-name">Maria Santos</div><div class="test-pet">Tutora da Luna — Golden Retriever</div></div>
+          <div><div class="test-name">Fernanda</div><div class="test-pet">Tutora da Vic</div></div>
         </div>
       </div>
       <div class="test-card fade-up">
         <div class="test-quote-icon">"</div>
         <div class="test-stars">★★★★★</div>
-        <p class="test-text">Meu gato Tom odiava ir ao vet. Com a Dra. Ana ele ficou relaxado pela primeira vez! O ambiente calmo faz toda a diferença. Atendimento impecável.</p>
+        <p class="test-text">Obrigada Dra, gratidão pela atenção. Adorei que está atendendo por sua conta, fiquei feliz.</p>
         <div class="test-author">
-          <div class="test-avatar">🐈</div>
-          <div><div class="test-name">Carlos Ribeiro</div><div class="test-pet">Tutor do Tom — Gato SRD</div></div>
+          <div class="test-avatar">🐾</div>
+          <div><div class="test-name">Glória R.</div><div class="test-pet">Tutora de [pet]</div></div>
         </div>
       </div>
       <div class="test-card fade-up">
         <div class="test-quote-icon">"</div>
         <div class="test-stars">★★★★★</div>
-        <p class="test-text">Atendimento domiciliar nota 10! Minha cachorrinha idosa não precisa mais passar pelo estresse do transporte. A Dra. Ana é um anjo. Muito grata!</p>
+        <p class="test-text">Amei! Muito carinhoso da sua parte! Muito obrigada!</p>
         <div class="test-author">
-          <div class="test-avatar">🐩</div>
-          <div><div class="test-name">Ana Paula</div><div class="test-pet">Tutora da Mel — Poodle, 12 anos</div></div>
+          <div class="test-avatar">🐾</div>
+          <div><div class="test-name">Adair Y.</div><div class="test-pet">Tutora de [pet]</div></div>
         </div>
       </div>
+      <div class="test-card fade-up">
+        <div class="test-quote-icon">"</div>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">Não tenho palavras que possam expressar a gratidão. Com todo carinho, avaliou e cuidou do meu anjinho.</p>
+        <div class="test-author">
+          <div class="test-avatar">🐾</div>
+          <div><div class="test-name">Rose</div><div class="test-pet">Tutora de [pet]</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="test-dots" data-dots>
+      <span class="active"></span><span></span><span></span><span></span>
     </div>
   </div>
 </section>
@@ -619,7 +639,7 @@ a{text-decoration:none;color:inherit}
           </div>
         </div>
         <div class="audio-player" data-audio-card>
-          <audio data-audio-el preload="metadata" src="audio/depoimento-renata.mp3"></audio>
+          <audio data-audio-el preload="auto" src="audio/depoimento-renata.mp3"></audio>
           <button class="audio-play" type="button" data-play-btn aria-label="Reproduzir depoimento">
             <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
             <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
@@ -631,28 +651,27 @@ a{text-decoration:none;color:inherit}
             <div class="audio-time" data-time>0:00 / 0:46</div>
           </div>
         </div>
-        <p class="audio-preview">"Minhas amigas me indicaram a Dra. Ana Lucia. Disseram: 'ela é uma graça, muito educada e sincera — fala a verdade sobre o que o cão precisa.' Deu tudo certo, graças a Deus!"</p>
+        <p class="audio-preview">"Minhas amigas me indicaram a Dra. Ana Lucia. Disseram: 'ela é uma graça, muito educada e sincera, fala a verdade sobre o que o cão precisa.' Deu tudo certo, graças a Deus!"</p>
         <button class="audio-transcript-toggle" type="button" data-transcript-btn>
           Ler transcrição
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="audio-transcript" data-transcript>
-          <div class="audio-transcript-inner">Deus é muito bom, né? Eu precisei de um veterinário e recebi várias indicações — minha amiga Letícia mandou, uma colega que trabalha na Justiça Federal mandou também. E a Letícia falou assim: "Renata, tem a doutora Ana Lucia. É uma graça, é muito educada. O que o cachorro precisa, ela fala, ela é bem sincera." Era exatamente isso que eu queria. E deu certo, graças a Deus! <em>(transcrição automática, pode conter pequenas imprecisões)</em></div>
+          <div class="audio-transcript-inner">Deus é muito bom, né? Eu precisei de um veterinário e recebi várias indicações: minha amiga Letícia mandou, uma colega que trabalha na Justiça Federal mandou também. E a Letícia falou assim: "Renata, tem a doutora Ana Lucia. É uma graça, é muito educada. O que o cachorro precisa, ela fala, ela é bem sincera." Era exatamente isso que eu queria. E deu certo, graças a Deus! <em>(transcrição automática, pode conter pequenas imprecisões)</em></div>
         </div>
       </div>
 
-      <!-- CARD DE ÁUDIO 2 -->
+      <!-- CARD DE ÁUDIO 2 — áudio real, nome/pet ainda não confirmados -->
       <div class="audio-card fade-up">
         <div class="audio-card-head">
-          <div class="audio-avatar">👨</div>
+          <div class="audio-avatar">🐱</div>
           <div>
-            <div class="audio-name">Paulo</div>
-            <div class="audio-pet">Tutor do Thor</div>
+            <div class="audio-name">[nome]</div>
+            <div class="audio-pet">Tutor(a) de [pet]</div>
           </div>
         </div>
         <div class="audio-player" data-audio-card>
-          <!-- EDITAR: troque o src pelo arquivo real (.mp3, .m4a ou .wav) -->
-          <audio data-audio-el preload="metadata" src="audio/depoimento-paulo.mp3"></audio>
+          <audio data-audio-el preload="auto" src="audio/depoimento-tutora-gato.mp3"></audio>
           <button class="audio-play" type="button" data-play-btn aria-label="Reproduzir depoimento">
             <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
             <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
@@ -661,31 +680,30 @@ a{text-decoration:none;color:inherit}
             <div class="audio-wave" data-wave>
               <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
-            <div class="audio-time" data-time>0:00 / 0:45</div>
+            <div class="audio-time" data-time>0:00 / 0:37</div>
           </div>
         </div>
-        <p class="audio-preview">"Achei que meu gato nunca ia se adaptar a um veterinário. Mas com a Dra. Ana ele ficou tranquilo desde o primeiro contato…" <em>(texto placeholder)</em></p>
+        <p class="audio-preview">"Oi, minha doutora linda, tudo bem? Por aqui está tudo ótimo, ele está uma gracinha, graças a Deus!"</p>
         <button class="audio-transcript-toggle" type="button" data-transcript-btn>
           Ler transcrição
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="audio-transcript" data-transcript>
-          <div class="audio-transcript-inner">[PLACEHOLDER — substituir pela transcrição completa e real deste depoimento quando o áudio definitivo for adicionado.]</div>
+          <div class="audio-transcript-inner">Oi, minha doutora linda, tudo bem? Por aqui está tudo ótimo, ele está uma gracinha, graças a Deus. A gente está fechando ele mais cedo pra evitar que fique muito na rua, no horário em que os outros gatos saem pra caçar, que é quando costuma dar problema. Então, umas 6 horas, já fecho ele em casa. E o incrível é que ele gosta: gosta de dormir cedo e gosta de ficar em casa com a gente. <em>(transcrição automática, pode conter pequenas imprecisões)</em></div>
         </div>
       </div>
 
-      <!-- CARD DE ÁUDIO 3 -->
+      <!-- CARD DE ÁUDIO 3 — áudio real, nome/pet ainda não confirmados -->
       <div class="audio-card fade-up">
         <div class="audio-card-head">
-          <div class="audio-avatar">👩</div>
+          <div class="audio-avatar">🐾</div>
           <div>
-            <div class="audio-name">Letícia</div>
-            <div class="audio-pet">Tutora da Amora</div>
+            <div class="audio-name">[nome]</div>
+            <div class="audio-pet">Tutor(a) de [pet]</div>
           </div>
         </div>
         <div class="audio-player" data-audio-card>
-          <!-- EDITAR: troque o src pelo arquivo real (.mp3, .m4a ou .wav) -->
-          <audio data-audio-el preload="metadata" src="audio/depoimento-leticia.mp3"></audio>
+          <audio data-audio-el preload="auto" src="audio/depoimento-abordagem.mp3"></audio>
           <button class="audio-play" type="button" data-play-btn aria-label="Reproduzir depoimento">
             <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
             <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
@@ -697,18 +715,18 @@ a{text-decoration:none;color:inherit}
             <div class="audio-time" data-time>0:00 / 0:32</div>
           </div>
         </div>
-        <p class="audio-preview">"Ter a consulta em casa mudou tudo pra gente. Minha cachorrinha idosa fica muito mais confortável assim…" <em>(texto placeholder)</em></p>
+        <p class="audio-preview">"A gente gosta muito da sua abordagem, de ver que você realmente gosta dos bichinhos, com toda a sua dedicação..."</p>
         <button class="audio-transcript-toggle" type="button" data-transcript-btn>
           Ler transcrição
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="audio-transcript" data-transcript>
-          <div class="audio-transcript-inner">[PLACEHOLDER — substituir pela transcrição completa e real deste depoimento quando o áudio definitivo for adicionado.]</div>
+          <div class="audio-transcript-inner">Eu quero te agradecer. A gente gosta muito da sua abordagem, de ver que você realmente gosta dos bichinhos, com toda a sua dedicação e preocupação em fazer o melhor por eles. Às vezes a gente passa por outros lugares que só querem resolver qualquer coisa, sem se preocupar de verdade. Mas a gente gosta muito da sua abordagem. Um bom final de semana, obrigado! <em>(transcrição automática, pode conter pequenas imprecisões)</em></div>
         </div>
       </div>
 
     </div>
-    <!-- Cards 2 e 3 ainda usam áudio placeholder — aguardando confirmação de qual tutor(a)/pet corresponde a cada arquivo em /audio antes de publicar como real -->
+    <!-- Cards 2 e 3: áudio real já publicado, nome/pet marcados como [nome]/[pet] até confirmação -->
     <p class="audio-note">*Nomes utilizados com autorização dos tutores.</p>
   </div>
 </section>
@@ -755,7 +773,7 @@ a{text-decoration:none;color:inherit}
       <div class="how-step fade-up">
         <div class="how-num">2</div>
         <h3>Escolha o melhor horário</h3>
-        <p>Vamos encontrar um horário que funcione para você — com flexibilidade e sem espera.</p>
+        <p>Vamos encontrar um horário que funcione para você, com flexibilidade e sem espera.</p>
         <div class="how-connector"></div>
       </div>
       <div class="how-step fade-up">
@@ -851,14 +869,14 @@ a{text-decoration:none;color:inherit}
       <div class="footer-col">
         <h4>Contato</h4>
         <a href="https://wa.me/5534999007306">WhatsApp: (34) 99900-7306</a>
-        <a href="https://instagram.com/draanaluciavet" target="_blank">@draanaluciavet</a>
-        <a>Uberaba — MG</a>
-        <a>Seg a Sex: 8h — 18h</a>
-        <a>Sáb: 8h — 12h</a>
+        <a href="https://instagram.com/ana_lucia_faleiros" target="_blank">@ana_lucia_faleiros</a>
+        <a>Uberaba, MG</a>
+        <a>Seg a Sex: 8h às 18h</a>
+        <a>Sáb: 8h às 12h</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Dra. Ana Lucia Faleiros — CRMV-MG — Todos os direitos reservados</span>
+      <span>© 2026 Dra. Ana Lucia Faleiros · CRMV-MG · Todos os direitos reservados</span>
       <span>Credenciada Petlove Saúde</span>
     </div>
   </div>
@@ -938,39 +956,63 @@ document.querySelectorAll('[data-audio-card]').forEach(card=>{
     const activeBars=Math.round(pct*waveBars.length);
     waveBars.forEach((bar,i)=>{ bar.style.opacity=i<activeBars?'1':'.55'; });
   });
-  audio.addEventListener('ended',()=>{
+  audio.addEventListener('play',()=>{
+    card.classList.add('playing');
+    iconPlay.style.display='none';
+    iconPause.style.display='';
+  });
+  audio.addEventListener('pause',()=>{
     card.classList.remove('playing');
     iconPlay.style.display='';
     iconPause.style.display='none';
+  });
+  audio.addEventListener('ended',()=>{
     waveBars.forEach(bar=>bar.style.opacity='.55');
   });
   audio.addEventListener('error',()=>{
     timeEl.textContent='Áudio ainda não adicionado';
   });
 
+  let isBusy=false;
   playBtn.addEventListener('click',()=>{
+    if(isBusy) return;
     document.querySelectorAll('[data-audio-el]').forEach(other=>{
-      if(other!==audio && !other.paused){
-        other.pause();
-        const otherCard=other.closest('[data-audio-card]');
-        otherCard.classList.remove('playing');
-        otherCard.querySelector('.icon-play').style.display='';
-        otherCard.querySelector('.icon-pause').style.display='none';
-      }
+      if(other!==audio && !other.paused) other.pause();
     });
     if(audio.paused){
-      audio.play().catch(()=>{ timeEl.textContent='Áudio ainda não adicionado'; });
-      card.classList.add('playing');
-      iconPlay.style.display='none';
-      iconPause.style.display='';
+      isBusy=true;
+      audio.play().then(()=>{ isBusy=false; }).catch(()=>{
+        isBusy=false;
+        timeEl.textContent='Áudio ainda não adicionado';
+      });
     }else{
       audio.pause();
-      card.classList.remove('playing');
-      iconPlay.style.display='';
-      iconPause.style.display='none';
     }
   });
 });
+
+// Testimonial carousel dots (mobile)
+(() => {
+  const track = document.querySelector('[data-carousel]');
+  const dots = document.querySelectorAll('[data-dots] span');
+  if(!track || !dots.length) return;
+  const cards = track.querySelectorAll('.test-card');
+  dots.forEach((dot,i)=>{
+    dot.addEventListener('click',()=>{
+      cards[i].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+    });
+  });
+  const dotObs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const idx=[...cards].indexOf(entry.target);
+        dots.forEach(d=>d.classList.remove('active'));
+        if(dots[idx]) dots[idx].classList.add('active');
+      }
+    });
+  },{root:track,threshold:.6});
+  cards.forEach(c=>dotObs.observe(c));
+})();
 
 // Transcript toggle
 document.querySelectorAll('[data-transcript-btn]').forEach(btn=>{
