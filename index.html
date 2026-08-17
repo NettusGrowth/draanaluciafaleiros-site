@@ -14,8 +14,12 @@
   --peach:#E8C4B0;--text:#2D2A26;--text-light:#6B6660;--white:#FFFFFF;
   --green-wa:#0B8A3E;--green-wa-hover:#07712F;--radius:16px;--radius-sm:10px;
 }
-html{scroll-behavior:smooth;font-size:16px}
+html{scroll-behavior:smooth;font-size:16px;scrollbar-width:thin;scrollbar-color:var(--sage-muted) var(--cream)}
 body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--cream);line-height:1.6;overflow-x:hidden}
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--sage-muted);border-radius:10px;border:2px solid var(--cream)}
+::-webkit-scrollbar-thumb:hover{background:var(--sage)}
 h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:600;line-height:1.2}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
@@ -33,6 +37,9 @@ a{text-decoration:none;color:inherit}
 .nav-cta:hover{background:var(--sage-dark);transform:translateY(-1px)}
 .nav-mobile{display:none;background:none;border:none;cursor:pointer;padding:4px}
 .nav-mobile svg{width:28px;height:28px;color:var(--sage-dark)}
+.nav-mobile .icon-close{display:none}
+.nav-mobile.open .icon-menu{display:none}
+.nav-mobile.open .icon-close{display:block}
 
 /* HERO */
 .hero{padding:140px 0 80px;position:relative;overflow:hidden}
@@ -127,6 +134,50 @@ a{text-decoration:none;color:inherit}
 .test-pet{font-size:.82rem;color:var(--text-light)}
 .test-quote-icon{position:absolute;top:24px;right:28px;font-size:2.5rem;color:var(--sage-light);font-family:Georgia,serif;line-height:1}
 
+/* AUDIO TESTIMONIALS */
+.audio-test{padding:100px 0;background:var(--white)}
+.audio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.audio-card{background:var(--cream);border:1px solid var(--sage-light);border-radius:var(--radius);padding:28px;transition:all .3s}
+.audio-card:hover{box-shadow:0 16px 40px rgba(0,0,0,.05);transform:translateY(-4px)}
+.audio-card-head{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.audio-avatar{width:48px;height:48px;border-radius:50%;background:var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.audio-name{font-weight:600;font-size:.92rem}
+.audio-pet{font-size:.8rem;color:var(--text-light)}
+.audio-player{display:flex;align-items:center;gap:14px;background:var(--white);border:1px solid var(--sage-light);border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:18px}
+.audio-play{width:44px;height:44px;min-width:44px;border-radius:50%;background:var(--sage);border:none;color:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;flex-shrink:0}
+.audio-play:hover{background:var(--sage-dark);transform:scale(1.06)}
+.audio-play svg{width:20px;height:20px}
+.audio-body{flex:1;min-width:0}
+.audio-wave{display:flex;align-items:center;gap:2px;height:26px}
+.audio-wave span{flex:1;background:var(--sage-muted);border-radius:2px;height:35%;transition:height .2s,background .2s}
+.audio-player.playing .audio-wave span{background:var(--sage)}
+.audio-time{font-size:.72rem;color:var(--text-light);margin-top:6px;font-variant-numeric:tabular-nums}
+.audio-preview{font-size:.9rem;color:var(--text);line-height:1.65;font-style:italic;margin-bottom:14px}
+.audio-preview em{color:var(--text-light);font-size:.78rem;font-style:normal}
+.audio-transcript-toggle{display:inline-flex;align-items:center;gap:6px;background:none;border:none;cursor:pointer;color:var(--sage-dark);font-weight:600;font-size:.85rem;padding:6px 0;font-family:'DM Sans',sans-serif}
+.audio-transcript-toggle svg{width:16px;height:16px;transition:transform .3s}
+.audio-transcript-toggle.open svg{transform:rotate(180deg)}
+.audio-transcript{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.audio-transcript.open{max-height:300px}
+.audio-transcript-inner{padding-top:12px;font-size:.85rem;color:var(--text-light);line-height:1.7;border-top:1px solid var(--sage-light);margin-top:4px}
+.audio-note{margin-top:32px;font-size:.78rem;color:var(--text-light);text-align:center}
+
+/* GOOGLE BLOCK */
+.google-block{padding:0 0 100px;background:var(--white)}
+.google-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:40px;background:var(--sage-light);border-radius:var(--radius);padding:40px 48px;position:relative;overflow:hidden}
+.google-left{text-align:center;padding-right:40px;border-right:1px solid rgba(107,127,94,.2)}
+.google-rating{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--sage-dark);margin-top:8px}
+.google-rating .stars{color:var(--warm);font-size:1.1rem;letter-spacing:1px}
+.google-label{font-size:.85rem;color:var(--text);font-weight:600;margin-top:4px}
+.google-count{font-size:.78rem;color:var(--text-light);margin-top:4px;white-space:nowrap}
+.google-center{text-align:center;padding:0 12px}
+.google-center p{font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;color:var(--text);margin-bottom:20px;line-height:1.5}
+.btn-google{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--sage-dark);border:1.5px solid var(--sage);padding:12px 24px;border-radius:50px;font-weight:600;font-size:.9rem;transition:all .3s}
+.btn-google:hover{background:var(--sage);color:var(--white)}
+.btn-google svg{width:18px;height:18px}
+.google-right{width:180px;height:180px;border-radius:24px;overflow:hidden;flex-shrink:0}
+.google-img{width:100%;height:100%;object-fit:cover}
+
 /* HOW IT WORKS */
 .how{padding:100px 0;background:var(--white)}
 .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
@@ -197,9 +248,26 @@ a{text-decoration:none;color:inherit}
   .footer-grid{grid-template-columns:1fr 1fr}
   .how-connector{display:none}
   .faq-side{position:static}
+  .audio-grid{grid-template-columns:1fr}
+  .google-card{grid-template-columns:1fr;text-align:center;padding:36px 28px;gap:24px}
+  .google-left{border-right:none;border-bottom:1px solid rgba(107,127,94,.2);padding-right:0;padding-bottom:24px}
+  .google-right{width:100%;height:200px;margin:0 auto}
 }
 @media(max-width:640px){
-  .nav-links{display:none}
+  .nav-links{
+    display:flex;flex-direction:column;align-items:stretch;gap:0;
+    position:absolute;top:100%;left:0;right:0;
+    background:var(--cream);
+    padding:8px 24px 20px;
+    border-bottom:1px solid var(--sage-light);
+    box-shadow:0 16px 32px rgba(0,0,0,.1);
+    max-height:0;overflow:hidden;
+    transition:max-height .35s ease;
+  }
+  .nav-links.open{max-height:400px}
+  .nav-links a:not(.nav-cta){padding:14px 4px;border-bottom:1px solid var(--sage-light);font-size:1rem;color:var(--text)}
+  .nav-links a:not(.nav-cta):last-of-type{border-bottom:none}
+  .nav-links .nav-cta{margin-top:14px;text-align:center;padding:14px 22px;font-size:.92rem}
   .nav-mobile{display:block}
   .problems-grid,.services-grid,.test-grid,.how-grid,.trust-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
@@ -207,6 +275,22 @@ a{text-decoration:none;color:inherit}
   .hero-trust{flex-direction:column;gap:12px}
   .about-stats{grid-template-columns:repeat(3,1fr)}
   .hero h1{font-size:2rem}
+  .hero-float{padding:10px 12px;gap:8px;border-radius:12px}
+  .hero-float .icon{width:32px;height:32px;font-size:15px;border-radius:9px}
+  .hero-float p{font-size:.72rem}
+  .hero-float small{font-size:.66rem}
+  .hero-float-1{bottom:12px;left:12px}
+  .hero-float-2{top:12px;right:12px}
+  .wa-float{width:54px;height:54px;bottom:16px;right:16px}
+  .wa-float svg{width:28px;height:28px}
+  .audio-test{padding:64px 0}
+  .audio-card{padding:22px}
+  .audio-player{padding:10px 12px;gap:10px}
+  .audio-wave{height:22px}
+  .google-block{padding-bottom:64px}
+  .google-card{padding:28px 20px}
+  .google-center p{font-size:1.05rem}
+  .google-right{height:160px}
 }
 </style>
 </head>
@@ -226,8 +310,9 @@ a{text-decoration:none;color:inherit}
       <a href="#faq">Dúvidas</a>
       <a href="https://wa.me/5534999007306?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20meu%20pet." class="nav-cta">Agendar Consulta</a>
     </div>
-    <button class="nav-mobile" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    <button class="nav-mobile" onclick="toggleMobileNav()" aria-label="Abrir menu">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
   </div>
 </nav>
@@ -426,6 +511,144 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
+<!-- AUDIO TESTIMONIALS -->
+<section class="audio-test" id="depoimentos-audio">
+  <div class="container">
+    <div class="section-tag fade-up">Prova Social</div>
+    <h2 class="section-title fade-up">Histórias que <em>tocam a gente</em></h2>
+    <p class="section-sub fade-up">Depoimentos reais, gravados pela voz de quem já confiou o cuidado do seu pet à Dra. Ana Lucia.</p>
+    <div class="audio-grid">
+
+      <!-- CARD DE ÁUDIO 1 — troque avatar/nome/pet/arquivo/transcrição pelos dados reais -->
+      <div class="audio-card fade-up">
+        <div class="audio-card-head">
+          <div class="audio-avatar">👩</div>
+          <div>
+            <div class="audio-name">Fernanda</div>
+            <div class="audio-pet">Tutora da Mel</div>
+          </div>
+        </div>
+        <div class="audio-player" data-audio-card>
+          <!-- EDITAR: troque o src pelo arquivo real (.mp3, .m4a ou .wav) -->
+          <audio data-audio-el preload="metadata" src="audio/depoimento-fernanda.mp3"></audio>
+          <button class="audio-play" type="button" data-play-btn aria-label="Reproduzir depoimento">
+            <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+          <div class="audio-body">
+            <div class="audio-wave" data-wave>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="audio-time" data-time>0:00 / 0:38</div>
+          </div>
+        </div>
+        <p class="audio-preview">"A Mel sempre ficava muito agitada em consultas. Com a Dra. Ana foi diferente. Ela teve um carinho que eu nunca tinha visto…" <em>(texto placeholder)</em></p>
+        <button class="audio-transcript-toggle" type="button" data-transcript-btn>
+          Ler transcrição
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="audio-transcript" data-transcript>
+          <div class="audio-transcript-inner">[PLACEHOLDER — substituir pela transcrição completa e real deste depoimento quando o áudio definitivo for adicionado.]</div>
+        </div>
+      </div>
+
+      <!-- CARD DE ÁUDIO 2 -->
+      <div class="audio-card fade-up">
+        <div class="audio-card-head">
+          <div class="audio-avatar">👨</div>
+          <div>
+            <div class="audio-name">Paulo</div>
+            <div class="audio-pet">Tutor do Thor</div>
+          </div>
+        </div>
+        <div class="audio-player" data-audio-card>
+          <!-- EDITAR: troque o src pelo arquivo real (.mp3, .m4a ou .wav) -->
+          <audio data-audio-el preload="metadata" src="audio/depoimento-paulo.mp3"></audio>
+          <button class="audio-play" type="button" data-play-btn aria-label="Reproduzir depoimento">
+            <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+          <div class="audio-body">
+            <div class="audio-wave" data-wave>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="audio-time" data-time>0:00 / 0:45</div>
+          </div>
+        </div>
+        <p class="audio-preview">"Achei que meu gato nunca ia se adaptar a um veterinário. Mas com a Dra. Ana ele ficou tranquilo desde o primeiro contato…" <em>(texto placeholder)</em></p>
+        <button class="audio-transcript-toggle" type="button" data-transcript-btn>
+          Ler transcrição
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="audio-transcript" data-transcript>
+          <div class="audio-transcript-inner">[PLACEHOLDER — substituir pela transcrição completa e real deste depoimento quando o áudio definitivo for adicionado.]</div>
+        </div>
+      </div>
+
+      <!-- CARD DE ÁUDIO 3 -->
+      <div class="audio-card fade-up">
+        <div class="audio-card-head">
+          <div class="audio-avatar">👩</div>
+          <div>
+            <div class="audio-name">Letícia</div>
+            <div class="audio-pet">Tutora da Amora</div>
+          </div>
+        </div>
+        <div class="audio-player" data-audio-card>
+          <!-- EDITAR: troque o src pelo arquivo real (.mp3, .m4a ou .wav) -->
+          <audio data-audio-el preload="metadata" src="audio/depoimento-leticia.mp3"></audio>
+          <button class="audio-play" type="button" data-play-btn aria-label="Reproduzir depoimento">
+            <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+          <div class="audio-body">
+            <div class="audio-wave" data-wave>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="audio-time" data-time>0:00 / 0:32</div>
+          </div>
+        </div>
+        <p class="audio-preview">"Ter a consulta em casa mudou tudo pra gente. Minha cachorrinha idosa fica muito mais confortável assim…" <em>(texto placeholder)</em></p>
+        <button class="audio-transcript-toggle" type="button" data-transcript-btn>
+          Ler transcrição
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="audio-transcript" data-transcript>
+          <div class="audio-transcript-inner">[PLACEHOLDER — substituir pela transcrição completa e real deste depoimento quando o áudio definitivo for adicionado.]</div>
+        </div>
+      </div>
+
+    </div>
+    <p class="audio-note">*Nomes utilizados com autorização dos tutores. Áudios ilustrativos — substitua pelos arquivos reais quando disponíveis.</p>
+  </div>
+</section>
+
+<!-- GOOGLE REVIEWS BLOCK -->
+<section class="google-block">
+  <div class="container">
+    <div class="google-card fade-up">
+      <div class="google-left">
+        <svg viewBox="0 0 48 48" width="34" height="34"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 8 3l6-6C33.5 6 29 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.1 8 3l6-6C33.5 6 29 4 24 4c-7.7 0-14.4 4.4-17.7 10.7z"/><path fill="#4CAF50" d="M24 44c5 0 9.4-1.9 12.8-5l-6.3-5.3C28.6 35.1 26.4 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.2 4.2-4.1 5.6l6.3 5.3C39.9 36.9 44 31 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        <div class="google-rating"><span data-google-rating>5,0</span> <span class="stars">★★★★★</span></div>
+        <div class="google-label">Avaliação no Google</div>
+        <!-- EDITAR: número real de avaliações do Google Meu Negócio -->
+        <div class="google-count">Baseado em <span data-google-count>150+</span> avaliações reais</div>
+      </div>
+      <div class="google-center">
+        <p>A opinião de quem já passou por aqui também está no Google.</p>
+        <!-- EDITAR: substituir "#" pelo link real do perfil do Google Meu Negócio -->
+        <a href="#" class="btn-google" data-google-link target="_blank" rel="noopener">
+          Ver todas as avaliações
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="google-right">
+        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=500&h=500&fit=crop" alt="Cão e gato juntos, tranquilos" class="google-img">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- HOW IT WORKS -->
 <section class="how">
   <div class="container" style="text-align:center">
@@ -558,6 +781,12 @@ a{text-decoration:none;color:inherit}
 </a>
 
 <script>
+// Mobile nav toggle
+function toggleMobileNav(){
+  document.querySelector('.nav-links').classList.toggle('open');
+  document.querySelector('.nav-mobile').classList.toggle('open');
+}
+
 // FAQ Toggle
 function toggleFaq(el){
   const wasActive=el.classList.contains('active');
@@ -584,6 +813,82 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     e.preventDefault();
     const t=document.querySelector(a.getAttribute('href'));
     if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+    const navLinks=document.querySelector('.nav-links');
+    if(navLinks.classList.contains('open')){
+      navLinks.classList.remove('open');
+      document.querySelector('.nav-mobile').classList.remove('open');
+    }
+  });
+});
+
+// Audio testimonial players
+function formatTime(s){
+  if(!isFinite(s))return '0:00';
+  const m=Math.floor(s/60), sec=Math.floor(s%60);
+  return m+':'+String(sec).padStart(2,'0');
+}
+document.querySelectorAll('[data-audio-card]').forEach(card=>{
+  const audio=card.querySelector('[data-audio-el]');
+  const playBtn=card.querySelector('[data-play-btn]');
+  const iconPlay=playBtn.querySelector('.icon-play');
+  const iconPause=playBtn.querySelector('.icon-pause');
+  const waveBars=card.querySelectorAll('[data-wave] span');
+  const timeEl=card.querySelector('[data-time]');
+  let totalLabel='0:00';
+
+  waveBars.forEach(bar=>{ bar.style.height=(20+Math.random()*70)+'%'; });
+
+  audio.addEventListener('loadedmetadata',()=>{
+    totalLabel=formatTime(audio.duration);
+    timeEl.textContent='0:00 / '+totalLabel;
+  });
+  audio.addEventListener('timeupdate',()=>{
+    timeEl.textContent=formatTime(audio.currentTime)+' / '+totalLabel;
+    const pct=audio.duration?audio.currentTime/audio.duration:0;
+    const activeBars=Math.round(pct*waveBars.length);
+    waveBars.forEach((bar,i)=>{ bar.style.opacity=i<activeBars?'1':'.55'; });
+  });
+  audio.addEventListener('ended',()=>{
+    card.classList.remove('playing');
+    iconPlay.style.display='';
+    iconPause.style.display='none';
+    waveBars.forEach(bar=>bar.style.opacity='.55');
+  });
+  audio.addEventListener('error',()=>{
+    timeEl.textContent='Áudio ainda não adicionado';
+  });
+
+  playBtn.addEventListener('click',()=>{
+    document.querySelectorAll('[data-audio-el]').forEach(other=>{
+      if(other!==audio && !other.paused){
+        other.pause();
+        const otherCard=other.closest('[data-audio-card]');
+        otherCard.classList.remove('playing');
+        otherCard.querySelector('.icon-play').style.display='';
+        otherCard.querySelector('.icon-pause').style.display='none';
+      }
+    });
+    if(audio.paused){
+      audio.play().catch(()=>{ timeEl.textContent='Áudio ainda não adicionado'; });
+      card.classList.add('playing');
+      iconPlay.style.display='none';
+      iconPause.style.display='';
+    }else{
+      audio.pause();
+      card.classList.remove('playing');
+      iconPlay.style.display='';
+      iconPause.style.display='none';
+    }
+  });
+});
+
+// Transcript toggle
+document.querySelectorAll('[data-transcript-btn]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const transcript=btn.nextElementSibling;
+    const isOpen=transcript.classList.toggle('open');
+    btn.classList.toggle('open',isOpen);
+    btn.firstChild.textContent=isOpen?'Fechar transcrição ':'Ler transcrição ';
   });
 });
 </script>
