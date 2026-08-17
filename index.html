@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Ana Lucia Faleiros | Veterinária em Uberaba - Atendimento Humanizado</title>
+<meta name="description" content="Dra. Ana Lucia Faleiros — Médica veterinária em Uberaba. Atendimento humanizado, com carinho e atenção exclusiva para seu pet. Agende pelo WhatsApp.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --sage:#6B7F5E;--sage-dark:#4A5A3F;--sage-light:#E8EDE4;--sage-muted:#D4DDD0;
+  --cream:#FBF8F4;--cream-dark:#F3EDE5;--warm:#C4956A;--warm-light:#F5E6D8;
+  --peach:#E8C4B0;--text:#2D2A26;--text-light:#6B6660;--white:#FFFFFF;
+  --green-wa:#0B8A3E;--green-wa-hover:#07712F;--radius:16px;--radius-sm:10px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--cream);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:600;line-height:1.2}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(251,248,244,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(107,127,94,.1);transition:all .3s}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:14px 24px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--sage-dark);display:flex;align-items:center;gap:10px}
+.nav-logo svg{width:28px;height:28px}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:.88rem;font-weight:500;color:var(--text-light);transition:color .3s;letter-spacing:.02em}
+.nav-links a:hover{color:var(--sage-dark)}
+.nav-cta{background:var(--sage);color:var(--white);padding:10px 22px;border-radius:50px;font-size:.85rem;font-weight:600;transition:all .3s;border:none;cursor:pointer;letter-spacing:.02em}
+.nav-cta:hover{background:var(--sage-dark);transform:translateY(-1px)}
+.nav-mobile{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.nav-mobile svg{width:28px;height:28px;color:var(--sage-dark)}
+
+/* HERO */
+.hero{padding:140px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(107,127,94,.08),transparent 70%);border-radius:50%}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--sage-light);color:var(--sage-dark);padding:8px 18px;border-radius:50px;font-size:.82rem;font-weight:600;margin-bottom:24px;letter-spacing:.03em}
+.hero-badge svg{width:16px;height:16px}
+.hero h1{font-size:clamp(2.4rem,5vw,3.6rem);color:var(--text);margin-bottom:20px;letter-spacing:-.02em}
+.hero h1 span{color:var(--sage);font-style:italic}
+.hero-sub{font-size:1.1rem;color:var(--text-light);margin-bottom:36px;max-width:480px;line-height:1.7}
+.hero-btns{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--green-wa);color:var(--white);padding:16px 32px;border-radius:50px;font-size:1rem;font-weight:600;transition:all .3s;box-shadow:0 4px 24px rgba(11,138,62,.3);border:none;cursor:pointer}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(11,138,62,.4);background:var(--green-wa-hover)}
+.btn-primary svg{width:22px;height:22px}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;color:var(--sage-dark);font-weight:600;font-size:.95rem;transition:all .3s;padding:12px 0}
+.btn-secondary:hover{gap:12px}
+.btn-secondary svg{width:18px;height:18px;transition:transform .3s}
+.btn-secondary:hover svg{transform:translateX(4px)}
+.hero-img{position:relative}
+.hero-img-main{width:100%;border-radius:32px;aspect-ratio:4/5;background:linear-gradient(135deg,var(--sage-light),var(--cream-dark));display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.08)}
+.hero-img-icon{font-size:120px;filter:grayscale(.2)}
+.hero-float{position:absolute;background:var(--white);border-radius:var(--radius);padding:16px 20px;box-shadow:0 8px 32px rgba(0,0,0,.08);display:flex;align-items:center;gap:12px;animation:float 4s ease-in-out infinite}
+.hero-float-1{bottom:60px;left:-30px;animation-delay:0s}
+.hero-float-2{top:40px;right:-20px;animation-delay:1.5s}
+.hero-float .icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.hero-float .icon.green{background:var(--sage-light)}
+.hero-float .icon.warm{background:var(--warm-light)}
+.hero-float p{font-size:.82rem;font-weight:600;color:var(--text)}
+.hero-float small{font-size:.75rem;color:var(--text-light)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-trust{margin-top:48px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hero-trust-item{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--text-light);font-weight:500}
+.hero-trust-item svg{width:16px;height:16px;color:var(--sage)}
+
+/* TRUST BAR */
+.trust-bar{background:var(--sage);padding:28px 0;margin-top:0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.trust-item{display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--white)}
+.trust-item .num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700}
+.trust-item .label{font-size:.82rem;opacity:.85;letter-spacing:.03em}
+
+/* PROBLEMS */
+.problems{padding:100px 0;background:var(--white)}
+.section-tag{display:inline-flex;align-items:center;gap:8px;background:var(--sage-light);color:var(--sage-dark);padding:7px 16px;border-radius:50px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px}
+.section-title{font-size:clamp(1.8rem,3.5vw,2.6rem);max-width:600px;margin-bottom:16px;letter-spacing:-.01em}
+.section-sub{font-size:1.05rem;color:var(--text-light);max-width:540px;margin-bottom:48px;line-height:1.7}
+.problems-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.problem-card{background:var(--cream);border-radius:var(--radius);padding:32px;transition:all .3s;border:1px solid transparent}
+.problem-card:hover{border-color:var(--sage-muted);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.05)}
+.problem-card .emoji{font-size:2rem;margin-bottom:16px;display:block}
+.problem-card h3{font-size:1.15rem;margin-bottom:10px}
+.problem-card p{font-size:.92rem;color:var(--text-light);line-height:1.6}
+
+/* SERVICES */
+.services{padding:100px 0;background:var(--cream)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--white);border-radius:var(--radius);padding:36px 28px;transition:all .3s;border:1.5px solid var(--sage-light);position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--sage);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.06)}
+.service-icon{width:56px;height:56px;border-radius:16px;background:var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px}
+.service-card h3{font-size:1.15rem;margin-bottom:10px}
+.service-card p{font-size:.9rem;color:var(--text-light);line-height:1.6}
+
+/* ABOUT */
+.about{padding:100px 0;background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-img{border-radius:32px;aspect-ratio:3/4;background:linear-gradient(160deg,var(--sage-light),var(--warm-light));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.06)}
+.about-img::after{content:'';position:absolute;inset:0;border:2px solid rgba(107,127,94,.1);border-radius:32px}
+.about-img .emoji{font-size:100px;opacity:.8}
+.about-quote{position:absolute;bottom:24px;left:24px;right:24px;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);padding:20px;border-radius:var(--radius-sm);font-style:italic;font-size:.88rem;color:var(--text);line-height:1.5}
+.about-content h2{font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:24px}
+.about-content h2 span{color:var(--sage);font-style:italic}
+.about-text{font-size:1rem;color:var(--text-light);line-height:1.8;margin-bottom:20px}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;padding:28px 0;border-top:1px solid var(--sage-light);border-bottom:1px solid var(--sage-light)}
+.about-stat{text-align:center}
+.about-stat .val{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--sage-dark)}
+.about-stat .lbl{font-size:.78rem;color:var(--text-light);margin-top:4px;letter-spacing:.03em}
+.about-crmv{display:inline-flex;align-items:center;gap:8px;background:var(--sage-light);padding:10px 18px;border-radius:50px;font-size:.85rem;font-weight:600;color:var(--sage-dark);margin-top:12px}
+
+/* TESTIMONIALS */
+.testimonials{padding:100px 0;background:var(--sage-light)}
+.testimonials .section-tag{background:var(--white)}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.test-card{background:var(--white);border-radius:var(--radius);padding:32px;position:relative;transition:all .3s}
+.test-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.06)}
+.test-stars{color:var(--warm);font-size:1.1rem;margin-bottom:16px;letter-spacing:2px}
+.test-text{font-size:.95rem;color:var(--text);line-height:1.7;margin-bottom:24px;font-style:italic}
+.test-author{display:flex;align-items:center;gap:14px}
+.test-avatar{width:48px;height:48px;border-radius:50%;background:var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.test-name{font-weight:600;font-size:.9rem}
+.test-pet{font-size:.82rem;color:var(--text-light)}
+.test-quote-icon{position:absolute;top:24px;right:28px;font-size:2.5rem;color:var(--sage-light);font-family:Georgia,serif;line-height:1}
+
+/* HOW IT WORKS */
+.how{padding:100px 0;background:var(--white)}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
+.how-step{text-align:center;position:relative}
+.how-num{width:64px;height:64px;border-radius:50%;background:var(--sage);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin:0 auto 20px}
+.how-step h3{font-size:1.15rem;margin-bottom:10px}
+.how-step p{font-size:.9rem;color:var(--text-light);max-width:280px;margin:0 auto;line-height:1.6}
+.how-connector{position:absolute;top:32px;right:-16px;width:32px;height:2px;background:var(--sage-muted)}
+
+/* FAQ */
+.faq{padding:100px 0;background:var(--cream)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:48px}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--white);border-radius:var(--radius-sm);border:1px solid var(--sage-light);overflow:hidden;transition:all .3s}
+.faq-item.active{border-color:var(--sage);box-shadow:0 4px 16px rgba(107,127,94,.1)}
+.faq-q{padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:.95rem;transition:background .3s;user-select:none}
+.faq-q:hover{background:var(--sage-light)}
+.faq-q svg{width:20px;height:20px;color:var(--sage);transition:transform .3s;flex-shrink:0}
+.faq-item.active .faq-q svg{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.active .faq-a{max-height:200px}
+.faq-a-inner{padding:0 24px 20px;font-size:.9rem;color:var(--text-light);line-height:1.7}
+.faq-side{position:sticky;top:120px}
+.faq-side-card{background:var(--sage);border-radius:var(--radius);padding:40px;color:var(--white);text-align:center}
+.faq-side-card h3{font-size:1.5rem;margin-bottom:12px}
+.faq-side-card p{font-size:.92rem;opacity:.85;margin-bottom:28px;line-height:1.6}
+.faq-side-card .btn-primary{background:var(--white);color:var(--sage-dark);box-shadow:0 4px 24px rgba(0,0,0,.15)}
+
+/* CTA FINAL */
+.cta-final{padding:100px 0;background:linear-gradient(135deg,var(--sage-dark),var(--sage));position:relative;overflow:hidden;text-align:center;color:var(--white)}
+.cta-final::before{content:'🐾';font-size:300px;position:absolute;right:-60px;bottom:-60px;opacity:.05}
+.cta-final::after{content:'🐾';font-size:200px;position:absolute;left:-40px;top:-40px;opacity:.04;transform:rotate(-30deg)}
+.cta-final h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
+.cta-final h2 span{font-style:italic;color:var(--peach)}
+.cta-final .sub{font-size:1.1rem;opacity:.85;max-width:500px;margin:0 auto 36px;line-height:1.7}
+.cta-final .btn-primary{font-size:1.1rem;padding:18px 40px}
+.cta-final .note{margin-top:16px;font-size:.82rem;opacity:.6}
+
+/* FOOTER */
+.footer{background:var(--text);color:var(--white);padding:64px 0 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.footer-brand h3{font-size:1.3rem;margin-bottom:12px}
+.footer-brand p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.7;max-width:280px}
+.footer-col h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:16px}
+.footer-col a{display:block;font-size:.9rem;color:rgba(255,255,255,.7);margin-bottom:10px;transition:color .3s}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:.82rem;color:rgba(255,255,255,.4)}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:999;width:62px;height:62px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,.4);cursor:pointer;transition:all .3s;animation:pulse 2.5s ease-in-out infinite}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.5)}
+.wa-float svg{width:32px;height:32px;fill:white}
+@keyframes pulse{0%,100%{box-shadow:0 4px 24px rgba(37,211,102,.4)}50%{box-shadow:0 4px 32px rgba(37,211,102,.6),0 0 0 12px rgba(37,211,102,.1)}}
+.wa-tooltip{position:absolute;right:72px;top:50%;transform:translateY(-50%);background:var(--white);color:var(--text);padding:10px 16px;border-radius:10px;font-size:.82rem;font-weight:600;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.1);opacity:0;pointer-events:none;transition:opacity .3s}
+.wa-float:hover .wa-tooltip{opacity:1}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.16,1,.3,1)}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:968px){
+  .hero-grid,.about-grid,.faq-grid{grid-template-columns:1fr}
+  .hero-img{order:-1}
+  .hero-img-main{aspect-ratio:16/10}
+  .problems-grid,.services-grid,.test-grid,.how-grid{grid-template-columns:1fr 1fr}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .how-connector{display:none}
+  .faq-side{position:static}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .nav-mobile{display:block}
+  .problems-grid,.services-grid,.test-grid,.how-grid,.trust-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .hero-trust{flex-direction:column;gap:12px}
+  .about-stats{grid-template-columns:repeat(3,1fr)}
+  .hero h1{font-size:2rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#6B7F5E" stroke="none"/></svg>
+      Dra. Ana Lucia
+    </a>
+    <div class="nav-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="https://wa.me/5534999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20meu%20pet." class="nav-cta">Agendar Consulta</a>
+    </div>
+    <button class="nav-mobile" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="fade-up">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          Atendimento Humanizado
+        </div>
+        <h1>Cuidado veterinário com <span>carinho e atenção</span> em Uberaba</h1>
+        <p class="hero-sub">Dra. Ana Lucia Faleiros — consultas, vacinas e acompanhamento para seu pet em um ambiente tranquilo, com o tempo e a dedicação que ele merece.</p>
+        <div class="hero-btns">
+          <a href="https://wa.me/5534999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20meu%20pet." class="btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a href="#servicos" class="btn-secondary">
+            Ver serviços
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            5.0 no Google
+          </div>
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            CRMV-MG Ativo
+          </div>
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Atendimento com hora marcada
+          </div>
+        </div>
+      </div>
+      <div class="hero-img fade-up" style="animation-delay:.2s">
+        <div class="hero-img-main">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=750&fit=crop&crop=faces" alt="Veterinária examinando cachorro com carinho" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div class="hero-float hero-float-1">
+          <div class="icon green">🩺</div>
+          <div><p>Consulta tranquila</p><small>Sem pressa, sem estresse</small></div>
+        </div>
+        <div class="hero-float hero-float-2">
+          <div class="icon warm">❤️</div>
+          <div><p>+500 pets atendidos</p><small>com carinho e dedicação</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item fade-up"><div class="num">500+</div><div class="label">Pets atendidos com carinho</div></div>
+      <div class="trust-item fade-up"><div class="num">5.0</div><div class="label">Avaliação no Google</div></div>
+      <div class="trust-item fade-up"><div class="num">100%</div><div class="label">Atendimento personalizado</div></div>
+      <div class="trust-item fade-up"><div class="num">∞</div><div class="label">Amor pelos animais</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="problems">
+  <div class="container">
+    <div class="section-tag fade-up">Por que somos diferentes</div>
+    <h2 class="section-title fade-up">Seu pet merece mais do que <em>pressa e estresse</em></h2>
+    <p class="section-sub fade-up">Muitos tutores enfrentam dificuldades comuns ao levar seus pets ao veterinário. Aqui, fazemos diferente.</p>
+    <div class="problems-grid">
+      <div class="problem-card fade-up">
+        <span class="emoji">😰</span>
+        <h3>Longas esperas</h3>
+        <p>Nada de filas e espera desnecessária. Aqui, cada consulta tem hora marcada e tempo dedicado exclusivamente ao seu pet.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <span class="emoji">🏃</span>
+        <h3>Atendimento corrido</h3>
+        <p>Sem pressa para sair de uma consulta e entrar na próxima. Seu pet recebe toda a atenção que precisa, sem limite de tempo.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <span class="emoji">😿</span>
+        <h3>Estresse e medo</h3>
+        <p>Ambiente calmo e acolhedor, sem aquele clima frio de clínica. Seu pet se sente seguro e o atendimento flui naturalmente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="section-tag fade-up">Nossos Serviços</div>
+    <h2 class="section-title fade-up">Cuidados completos para o <em>bem-estar</em> do seu pet</h2>
+    <p class="section-sub fade-up">Atendimento veterinário domiciliar e em consultório, personalizado e humanizado para o bem-estar dos pets.</p>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">🩺</div>
+        <h3>Consulta Clínica</h3>
+        <p>Avaliação completa da saúde do seu pet, com exame físico detalhado e orientação personalizada.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">💉</div>
+        <h3>Vacinação</h3>
+        <p>Protocolo vacinal atualizado e seguro, com acompanhamento do calendário do seu pet.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">🔬</div>
+        <h3>Check-up Preventivo</h3>
+        <p>Exames periódicos para detectar problemas cedo e garantir longevidade com qualidade de vida.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">🏠</div>
+        <h3>Atendimento Domiciliar</h3>
+        <p>Seu pet atendido no conforto de casa — ideal para quem tem dificuldade de deslocamento.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">🥗</div>
+        <h3>Orientação Nutricional</h3>
+        <p>Dieta personalizada para cada fase da vida, incluindo alimentação natural e funcional.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">🐾</div>
+        <h3>Acompanhamento Pós-consulta</h3>
+        <p>Retorno e acompanhamento contínuo para garantir a recuperação e o bem-estar completo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="sobre">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img fade-up">
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&h=660&fit=crop&crop=faces" alt="Dra. Ana Lucia Faleiros - Médica Veterinária" style="width:100%;height:100%;object-fit:cover;border-radius:32px">
+        <div class="about-quote">"Acredito que cuidar bem de um animal começa com escuta, empatia e respeito — pelo pet e pelo tutor."</div>
+      </div>
+      <div class="about-content fade-up">
+        <div class="section-tag">Sobre Mim</div>
+        <h2>Conheça a <span>Dra. Ana Lucia</span> Faleiros</h2>
+        <p class="about-text">Sou médica-veterinária apaixonada por animais e por pessoas. Decidi criar um espaço de atendimento onde cada pet recebe o tempo e a atenção que merece — sem pressa, sem produção em massa.</p>
+        <p class="about-text">Minha missão é oferecer um cuidado veterinário verdadeiramente humanizado: onde o tutor se sente acolhido, o pet se sente seguro, e a saúde é tratada de forma completa e individualizada.</p>
+        <div class="about-stats">
+          <div class="about-stat"><div class="val">500+</div><div class="lbl">Pets atendidos</div></div>
+          <div class="about-stat"><div class="val">100%</div><div class="lbl">Dedicação</div></div>
+          <div class="about-stat"><div class="val">5.0</div><div class="lbl">Avaliação Google</div></div>
+        </div>
+        <div class="about-crmv">🎓 CRMV-MG Ativo — Médica Veterinária</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="depoimentos">
+  <div class="container">
+    <div class="section-tag fade-up">Depoimentos</div>
+    <h2 class="section-title fade-up">O que dizem os <em>tutores</em></h2>
+    <p class="section-sub fade-up">A confiança de quem já passou pelo nosso atendimento é a melhor recomendação.</p>
+    <div class="test-grid">
+      <div class="test-card fade-up">
+        <div class="test-quote-icon">"</div>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">A Dra. Ana Lucia foi incrível com a Luna. Explicou tudo com muita paciência e a Luna ficou super tranquila durante toda a consulta. Recomendo de olhos fechados!</p>
+        <div class="test-author">
+          <div class="test-avatar">🐕</div>
+          <div><div class="test-name">Maria Santos</div><div class="test-pet">Tutora da Luna — Golden Retriever</div></div>
+        </div>
+      </div>
+      <div class="test-card fade-up">
+        <div class="test-quote-icon">"</div>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">Meu gato Tom odiava ir ao vet. Com a Dra. Ana ele ficou relaxado pela primeira vez! O ambiente calmo faz toda a diferença. Atendimento impecável.</p>
+        <div class="test-author">
+          <div class="test-avatar">🐈</div>
+          <div><div class="test-name">Carlos Ribeiro</div><div class="test-pet">Tutor do Tom — Gato SRD</div></div>
+        </div>
+      </div>
+      <div class="test-card fade-up">
+        <div class="test-quote-icon">"</div>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">Atendimento domiciliar nota 10! Minha cachorrinha idosa não precisa mais passar pelo estresse do transporte. A Dra. Ana é um anjo. Muito grata!</p>
+        <div class="test-author">
+          <div class="test-avatar">🐩</div>
+          <div><div class="test-name">Ana Paula</div><div class="test-pet">Tutora da Mel — Poodle, 12 anos</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="container" style="text-align:center">
+    <div class="section-tag fade-up">Como funciona</div>
+    <h2 class="section-title fade-up" style="margin:0 auto 8px">Agendar é <em>simples</em></h2>
+    <p class="section-sub fade-up" style="margin:0 auto 0">Três passos para seu pet receber o melhor cuidado.</p>
+    <div class="how-grid">
+      <div class="how-step fade-up">
+        <div class="how-num">1</div>
+        <h3>Envie uma mensagem</h3>
+        <p>Clique no botão de WhatsApp e nos conte o que seu pet precisa. Respondemos rapidinho!</p>
+        <div class="how-connector"></div>
+      </div>
+      <div class="how-step fade-up">
+        <div class="how-num">2</div>
+        <h3>Escolha o melhor horário</h3>
+        <p>Vamos encontrar um horário que funcione para você — com flexibilidade e sem espera.</p>
+        <div class="how-connector"></div>
+      </div>
+      <div class="how-step fade-up">
+        <div class="how-num">3</div>
+        <h3>Atendimento com carinho</h3>
+        <p>Seu pet é atendido com toda a calma e atenção que merece. Sem pressa, sem estresse.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-tag fade-up">Dúvidas Frequentes</div>
+    <h2 class="section-title fade-up">Tire suas <em>dúvidas</em></h2>
+    <div class="faq-grid">
+      <div class="faq-list">
+        <div class="faq-item active" onclick="toggleFaq(this)">
+          <div class="faq-q">Vocês atendem emergências?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg></div>
+          <div class="faq-a"><div class="faq-a-inner">Atendemos emergências de pequeno porte durante o horário de funcionamento. Para emergências graves fora do horário, indicamos hospitais veterinários 24h da região.</div></div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Preciso agendar ou posso ir sem hora marcada?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg></div>
+          <div class="faq-a"><div class="faq-a-inner">Trabalhamos exclusivamente com hora marcada para garantir que seu pet receba toda a atenção necessária, sem espera e sem pressa.</div></div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Atendem gatos também?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg></div>
+          <div class="faq-a"><div class="faq-a-inner">Sim! Atendemos cães, gatos e pequenos animais. Nosso ambiente é preparado para que os felinos se sintam seguros e confortáveis.</div></div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Aceitam plano de saúde pet?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg></div>
+          <div class="faq-a"><div class="faq-a-inner">Sim, somos credenciados à Petlove Saúde. Consulte-nos pelo WhatsApp para saber detalhes sobre cobertura e procedimentos disponíveis.</div></div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Onde fica o consultório?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg></div>
+          <div class="faq-a"><div class="faq-a-inner">Estamos em Uberaba, Minas Gerais. O endereço exato é enviado após o agendamento pelo WhatsApp para sua segurança e comodidade.</div></div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Quais formas de pagamento?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg></div>
+          <div class="faq-a"><div class="faq-a-inner">Aceitamos Pix, dinheiro, cartão de débito e crédito. Consulte condições de parcelamento pelo WhatsApp.</div></div>
+        </div>
+      </div>
+      <div class="faq-side fade-up">
+        <div class="faq-side-card">
+          <h3>Ainda tem dúvidas?</h3>
+          <p>Fale diretamente comigo pelo WhatsApp. Respondo pessoalmente cada mensagem com atenção.</p>
+          <a href="https://wa.me/5534999999999?text=Olá!%20Tenho%20uma%20dúvida%20sobre%20o%20atendimento." class="btn-primary" style="display:inline-flex">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Falar com a Dra. Ana
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="container fade-up">
+    <h2>Seu pet merece <span>o melhor cuidado</span></h2>
+    <p class="sub">Agende agora e garanta um atendimento tranquilo, com atenção exclusiva e todo o carinho que seu companheiro merece.</p>
+    <a href="https://wa.me/5534999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20meu%20pet." class="btn-primary">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:24px;height:24px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Agendar Consulta pelo WhatsApp
+    </a>
+    <p class="note">Respondemos em até 30 minutos durante o horário comercial</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Dra. Ana Lucia Faleiros</h3>
+        <p>Médica veterinária dedicada ao cuidado humanizado e acolhedor. Cada pet é especial e merece atenção exclusiva.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">Dúvidas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <a>Consulta Clínica</a>
+        <a>Vacinação</a>
+        <a>Check-up Preventivo</a>
+        <a>Atendimento Domiciliar</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/5534999999999">WhatsApp: (34) 99999-9999</a>
+        <a href="https://instagram.com/draanaluciavet" target="_blank">@draanaluciavet</a>
+        <a>Uberaba — MG</a>
+        <a>Seg a Sex: 8h — 18h</a>
+        <a>Sáb: 8h — 12h</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dra. Ana Lucia Faleiros — CRMV-MG — Todos os direitos reservados</span>
+      <span>Credenciada Petlove Saúde</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5534999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20para%20meu%20pet." class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <div class="wa-tooltip">Agende sua consulta! 🐾</div>
+</a>
+
+<script>
+// FAQ Toggle
+function toggleFaq(el){
+  const wasActive=el.classList.contains('active');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('active'));
+  if(!wasActive)el.classList.add('active');
+}
+
+// Scroll animations
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})
+},{threshold:.1,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+// Nav scroll effect
+window.addEventListener('scroll',()=>{
+  const nav=document.querySelector('.nav');
+  if(window.scrollY>50)nav.style.boxShadow='0 2px 20px rgba(0,0,0,.06)';
+  else nav.style.boxShadow='none';
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>
