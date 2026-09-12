@@ -355,6 +355,26 @@ a{text-decoration:none;color:inherit}
 @media(max-width:600px){.google-card{grid-template-columns:1fr;padding:24px;gap:24px}.google-center{text-align:center}.google-right{height:300px}.google-img{object-position:50% 58%}.google-center h2 br{display:none}.google-rating{font-size:3.5rem}.btn-google{justify-content:center;width:100%}.booking-steps{grid-template-columns:1fr;gap:16px;margin-top:28px}.booking-steps li{padding:24px 22px 24px 82px}.booking-icon{position:absolute;left:20px;top:24px;width:44px;height:44px;margin:0}.booking-number{position:static;font-size:.8rem;font-family:'DM Sans',sans-serif;font-weight:700;display:block;margin-bottom:8px}.booking-steps h3{font-size:1.2rem}.booking-options{gap:8px}.booking-options span{padding:12px 14px}.booking-action .btn-primary{width:100%;font-size:.95rem;padding:16px}.audio-card{padding:22px}.audio-name{overflow-wrap:anywhere}.wa-card-header{padding:14px}.test-author{gap:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}.fade-up{opacity:1;transform:none}}
 
+
+/* Relatos do Google e retrato sem sobreposição */
+.infinity-mark{height:44px;display:flex;align-items:center;justify-content:center}.infinity-mark svg{display:block;width:52px;height:30px}
+.trust-item .num{min-height:44px;display:flex;align-items:center;justify-content:center}
+.about-portrait{margin:0;border:1px solid var(--sage-muted);border-radius:28px;background:var(--white);overflow:hidden;box-shadow:0 18px 48px #4d624310}
+.about-photo-frame{aspect-ratio:4/5;overflow:hidden;background:var(--cream)}
+.about-photo-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 100%;transform:scale(1.2);transform-origin:50% 100%}
+.about-portrait figcaption{padding:26px 30px;background:var(--cream);border-top:1px solid var(--sage-light)}
+.portrait-label{display:block;text-transform:uppercase;letter-spacing:.08em;font-size:.68rem;font-weight:700;color:var(--sage-dark);margin-bottom:12px}
+.about-portrait figcaption p{font-family:'Playfair Display',serif;font-size:1.15rem;line-height:1.55;color:var(--text);margin-bottom:14px}
+.portrait-signature{font-size:.8rem;color:var(--sage-dark);font-weight:600}
+.google-excerpts{margin-top:32px}.google-excerpts-heading{text-align:center;margin:0 0 24px}.google-excerpts-heading h3{font-size:1.45rem;margin-bottom:8px}.google-excerpts-heading p{font-size:.88rem;color:var(--text-light)}
+.google-excerpt-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.google-excerpt{display:flex;flex-direction:column;min-width:0;margin:0;background:var(--cream);border:1px solid var(--sage-light);border-radius:20px;padding:28px}
+.review-stars{font-size:1rem;letter-spacing:3px;color:var(--gold-star);margin-bottom:16px}
+.google-excerpt blockquote{margin:0 0 24px;font-size:1rem;line-height:1.65;color:var(--text)}
+.google-excerpt figcaption{margin-top:auto;padding-top:16px;border-top:1px solid var(--sage-muted);font-size:.88rem}.google-excerpt figcaption span{display:block;font-size:.76rem;color:var(--text-light);margin-top:4px}
+.more-reviews{display:flex;align-items:center;justify-content:center;gap:12px;text-align:center;margin:24px auto 0;max-width:640px;min-height:48px;color:var(--sage-dark);font-size:.94rem;font-weight:600;text-decoration:underline;text-underline-offset:4px;padding:10px}
+@media(max-width:600px){.google-excerpt-grid{grid-template-columns:1fr;gap:14px}.google-excerpt{padding:24px}.google-excerpt blockquote{margin-bottom:20px}.about-portrait{border-radius:24px}.about-portrait figcaption{padding:22px}.about-portrait figcaption p{font-size:1.08rem}.about-photo-frame{aspect-ratio:1/1.05}.hero-float p{font-size:.73rem}.hero-float{max-width:225px}.more-reviews{font-size:.88rem}}
+
 </style>
 </head>
 <body>
@@ -426,7 +446,7 @@ a{text-decoration:none;color:inherit}
         </div>
         <div class="hero-float hero-float-2">
           <div class="icon warm">❤️</div>
-          <div><p>+500 pets atendidos</p><small>com carinho e dedicação</small></div>
+          <div><p>Mais de 4.000 pets atendidos</p><small>com carinho e dedicação</small></div>
         </div>
       </div>
     </div>
@@ -437,10 +457,10 @@ a{text-decoration:none;color:inherit}
 <section class="trust-bar">
   <div class="container">
     <div class="trust-grid">
-      <div class="trust-item fade-up"><div class="num">500+</div><div class="label">Pets atendidos com carinho</div></div>
+      <div class="trust-item fade-up"><div class="num">4.000+</div><div class="label">Pets atendidos com carinho</div></div>
       <div class="trust-item fade-up"><div class="num">5.0</div><div class="label">Avaliação no Google</div></div>
       <div class="trust-item fade-up"><div class="num">100%</div><div class="label">Atendimento personalizado</div></div>
-      <div class="trust-item fade-up"><div class="num">∞</div><div class="label">Amor pelos animais</div></div>
+      <div class="trust-item fade-up"><div class="num infinity-mark"><svg viewBox="0 0 64 32" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" aria-label="Infinito" role="img"><path d="M32 16C24 5 20 4 15 4a12 12 0 0 0 0 24c5 0 9-1 17-12S44 4 49 4a12 12 0 0 1 0 24c-5 0-9-1-17-12Z"/></svg></div><div class="label">Amor pelos animais</div></div>
     </div>
   </div>
 </section>
@@ -516,17 +536,17 @@ a{text-decoration:none;color:inherit}
 <section class="about" id="sobre">
   <div class="container">
     <div class="about-grid">
-      <div class="about-img fade-up">
-        <img src="img/dra-ana-sobre.webp" alt="Dra. Ana Lucia Faleiros com dois cachorros no colo" loading="lazy" width="1600" height="1686" style="width:100%;height:100%;object-fit:cover;object-position:50% 100%;transform:scale(1.2);transform-origin:50% 100%;border-radius:32px">
-        <div class="about-quote">"Acredito que cuidar bem de um animal começa com escuta, empatia e respeito, tanto pelo pet quanto pelo tutor."</div>
-      </div>
+      <figure class="about-portrait fade-up">
+        <div class="about-photo-frame"><img src="img/dra-ana-sobre.webp" alt="Dra. Ana Lucia Faleiros com dois cachorros no colo" loading="lazy" width="1600" height="1686"></div>
+        <figcaption><span class="portrait-label">Cuidado que começa com acolhimento</span><p>“Acredito que cuidar bem de um animal começa com escuta, empatia e respeito, tanto pelo pet quanto pelo tutor.”</p><span class="portrait-signature">Dra. Ana Lucia Faleiros</span></figcaption>
+      </figure>
       <div class="about-content fade-up">
         <div class="section-tag">Sobre Mim</div>
         <h2>Conheça a <span>Dra. Ana Lucia</span> Faleiros</h2>
         <p class="about-text">Sou médica-veterinária apaixonada por animais e por pessoas. Decidi criar um espaço de atendimento onde cada pet recebe o tempo e a atenção que merece, sem pressa e sem produção em massa.</p>
         <p class="about-text">Minha missão é oferecer um cuidado veterinário verdadeiramente humanizado: onde o tutor se sente acolhido, o pet se sente seguro, e a saúde é tratada de forma completa e individualizada.</p>
         <div class="about-stats">
-          <div class="about-stat"><div class="val">500+</div><div class="lbl">Pets atendidos</div></div>
+          <div class="about-stat"><div class="val">4.000+</div><div class="lbl">Pets atendidos</div></div>
           <div class="about-stat"><div class="val">100%</div><div class="lbl">Dedicação</div></div>
           <div class="about-stat"><div class="val">5.0</div><div class="lbl">Avaliação Google</div></div>
         </div>
@@ -548,7 +568,7 @@ a{text-decoration:none;color:inherit}
         <div class="test-stars">★★★★★</div>
         <p class="test-text">Essa titia Ana Lúcia é um amor!</p>
         <div class="test-author">
-          <div class="testimonial-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H4v7h5c0 4-2 6-5 7M20 5h-6v7h5c0 4-2 6-5 7"/></svg></div>
+          
           <div><div class="test-name">Fernanda</div><div class="test-pet">Depoimento de tutora</div></div>
         </div>
       </div>
@@ -557,7 +577,7 @@ a{text-decoration:none;color:inherit}
         <div class="test-stars">★★★★★</div>
         <p class="test-text">Obrigada Dra, gratidão pela atenção. Adorei que está atendendo por sua conta, fiquei feliz.</p>
         <div class="test-author">
-          <div class="testimonial-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H4v7h5c0 4-2 6-5 7M20 5h-6v7h5c0 4-2 6-5 7"/></svg></div>
+          
           <div><div class="test-name">Glória R.</div><div class="test-pet">Depoimento de tutora</div></div>
         </div>
       </div>
@@ -566,7 +586,7 @@ a{text-decoration:none;color:inherit}
         <div class="test-stars">★★★★★</div>
         <p class="test-text">Amei! Muito carinhoso da sua parte! Muito obrigada!</p>
         <div class="test-author">
-          <div class="testimonial-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H4v7h5c0 4-2 6-5 7M20 5h-6v7h5c0 4-2 6-5 7"/></svg></div>
+          
           <div><div class="test-name">Adair Y.</div><div class="test-pet">Depoimento de tutora</div></div>
         </div>
       </div>
@@ -575,7 +595,7 @@ a{text-decoration:none;color:inherit}
         <div class="test-stars">★★★★★</div>
         <p class="test-text">Não tenho palavras que possam expressar a gratidão. Com todo carinho, avaliou e cuidou do meu anjinho.</p>
         <div class="test-author">
-          <div class="testimonial-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H4v7h5c0 4-2 6-5 7M20 5h-6v7h5c0 4-2 6-5 7"/></svg></div>
+          
           <div><div class="test-name">Rose</div><div class="test-pet">Depoimento de tutora</div></div>
         </div>
       </div>
@@ -660,7 +680,7 @@ a{text-decoration:none;color:inherit}
         <div class="audio-card-head">
           <div class="audio-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4"/></svg></div>
           <div>
-            <div class="audio-name">Renata</div>
+            <div class="audio-name">Confiança por indicação</div>
             <div class="audio-pet">Relato em áudio</div>
           </div>
         </div>
@@ -778,6 +798,16 @@ a{text-decoration:none;color:inherit}
       <div class="google-right">
         <img src="img/dra-ana-avaliacoes.webp" alt="Dra. Ana Lucia Faleiros acolhendo um cachorro" class="google-img" width="1200" height="1800" loading="lazy">
       </div>
+    </div>
+
+    <div class="google-excerpts">
+      <div class="google-excerpts-heading"><h3>Quem viveu esse cuidado conta melhor.</h3><p>Trechos das avaliações no Google.</p></div>
+      <div class="google-excerpt-grid">
+        <figure class="google-excerpt"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“Extremamente gentil, humana, prestativa e disponível”</blockquote><figcaption><strong>Meire Vittorazzi</strong><span>Avaliação no Google</span></figcaption></figure>
+        <figure class="google-excerpt"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“fico tranquila e feliz pois sei q está em ótimas mãos”</blockquote><figcaption><strong>Letícia Gomes</strong><span>Avaliação no Google</span></figcaption></figure>
+        <figure class="google-excerpt"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“sempre prestativa, atenciosa e ama o que faz.”</blockquote><figcaption><strong>Vanessa Gomes</strong><span>Avaliação no Google</span></figcaption></figure>
+      </div>
+      <a class="more-reviews" href="https://maps.app.goo.gl/oMbY9A8Ha3vzDRPp8" target="_blank" rel="noopener">Leia esses relatos completos e outras avaliações no Google <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
