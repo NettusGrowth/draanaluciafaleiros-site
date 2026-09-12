@@ -326,6 +326,35 @@ a{text-decoration:none;color:inherit}
   .google-center p{font-size:1.05rem}
   .google-right{height:160px}
 }
+
+/* Depoimentos e agendamento: elementos gráficos e leitura responsiva */
+.testimonial-mark,.message-mark,.audio-mark{display:flex;align-items:center;justify-content:center;flex:none;color:var(--sage-dark)}
+.testimonial-mark{width:36px;border-left:2px solid var(--sage-muted)}
+.message-mark,.audio-mark{width:44px;height:44px;border-radius:12px;background:var(--sage-light)}
+.testimonial-mark svg,.message-mark svg,.audio-mark svg{width:24px;height:24px}
+.test-card{display:flex;flex-direction:column}.test-author{margin-top:auto}.test-quote-icon{display:none}
+.audio-grid{align-items:start}.audio-transcript.open{max-height:none}.audio-transcript-toggle{min-height:44px}
+.wa-header-status{font-size:.75rem}.wa-bubble{max-width:94%}
+.google-card{grid-template-columns:minmax(160px,.7fr) minmax(0,1.4fr) minmax(220px,1fr);padding:36px;gap:28px}
+.google-left{padding-right:24px}.google-rating{font-size:3.5rem;line-height:1.1}.google-rating .stars{display:block;font-size:1.25rem;margin:14px 0}
+.google-count{white-space:normal;font-size:.95rem;margin-top:10px}.google-count strong{font-size:1.2rem}
+.google-center{text-align:left;padding:0}.google-center h2{font-size:clamp(1.7rem,2.5vw,2.3rem);line-height:1.2;margin-bottom:16px}.google-center h2 em{color:var(--sage-dark)}
+.google-center p{font-family:'DM Sans',sans-serif;font-size:.98rem;font-style:normal}
+.google-right{width:100%;height:320px;border-radius:20px}.google-img{object-position:50% 60%}
+.how{background:var(--cream);text-align:center}.how .section-title,.how .section-sub{margin-left:auto;margin-right:auto}
+.booking-steps{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:40px 0 32px;padding:0;text-align:left;counter-reset:steps}
+.booking-steps li{position:relative;border:1px solid var(--sage-muted);border-radius:24px;background:var(--white);padding:28px;transition:transform .2s,box-shadow .2s}
+.booking-steps li:hover{transform:translateY(-4px);box-shadow:0 12px 28px #4d624312}
+.booking-icon{display:flex;width:48px;height:48px;align-items:center;justify-content:center;border-radius:14px;background:var(--sage-light);color:var(--sage-dark);margin-bottom:24px}.booking-icon svg{width:26px;height:26px}
+.booking-number{position:absolute;right:24px;top:24px;font-size:1.8rem;color:var(--sage);font-family:'Playfair Display',serif}
+.booking-steps h3{font-size:1.3rem;line-height:1.3;margin-bottom:12px}.booking-steps p{font-size:.94rem;color:var(--text-light);line-height:1.65}
+.booking-action{max-width:760px;margin:auto}.booking-action fieldset{border:0;min-width:0;padding:0}.booking-action legend{font-weight:600;width:100%;margin-bottom:16px}
+.booking-options{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:24px}.booking-options label{position:relative;cursor:pointer}.booking-options input{position:absolute;opacity:0;width:1px;height:1px}.booking-options span{display:block;padding:12px 18px;border:1px solid var(--sage-muted);border-radius:30px;background:white;font-size:.9rem;transition:background .2s}.booking-options input:checked+span{background:var(--sage-dark);color:white;border-color:var(--sage-dark)}.booking-options input:focus-visible+span{outline:3px solid var(--sage);outline-offset:3px}
+.booking-note{font-size:.82rem;color:var(--text-light);max-width:500px;margin:16px auto 0}.booking-action .btn-primary{white-space:normal;justify-content:center}
+@media(max-width:968px){.google-card{grid-template-columns:1fr 1.4fr;padding:28px}.google-left{border:0;padding:0}.google-right{grid-column:1/-1;height:360px}.google-center{text-align:left}.booking-steps{gap:14px}.booking-steps li{padding:20px}.booking-steps h3{font-size:1.1rem}}
+@media(max-width:600px){.google-card{grid-template-columns:1fr;padding:24px;gap:24px}.google-center{text-align:center}.google-right{height:300px}.google-img{object-position:50% 58%}.google-center h2 br{display:none}.google-rating{font-size:3.5rem}.btn-google{justify-content:center;width:100%}.booking-steps{grid-template-columns:1fr;gap:16px;margin-top:28px}.booking-steps li{padding:24px 22px 24px 82px}.booking-icon{position:absolute;left:20px;top:24px;width:44px;height:44px;margin:0}.booking-number{position:static;font-size:.8rem;font-family:'DM Sans',sans-serif;font-weight:700;display:block;margin-bottom:8px}.booking-steps h3{font-size:1.2rem}.booking-options{gap:8px}.booking-options span{padding:12px 14px}.booking-action .btn-primary{width:100%;font-size:.95rem;padding:16px}.audio-card{padding:22px}.audio-name{overflow-wrap:anywhere}.wa-card-header{padding:14px}.test-author{gap:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}.fade-up{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
@@ -375,7 +404,7 @@ a{text-decoration:none;color:inherit}
         <div class="hero-trust">
           <div class="hero-trust-item">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            5.0 no Google
+            5,0 · 25 avaliações no Google
           </div>
           <div class="hero-trust-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -519,8 +548,8 @@ a{text-decoration:none;color:inherit}
         <div class="test-stars">★★★★★</div>
         <p class="test-text">Essa titia Ana Lúcia é um amor!</p>
         <div class="test-author">
-          <div class="test-avatar">🐕</div>
-          <div><div class="test-name">Fernanda</div><div class="test-pet">Tutora da Vic</div></div>
+          <div class="testimonial-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H4v7h5c0 4-2 6-5 7M20 5h-6v7h5c0 4-2 6-5 7"/></svg></div>
+          <div><div class="test-name">Fernanda</div><div class="test-pet">Depoimento de tutora</div></div>
         </div>
       </div>
       <div class="test-card fade-up">
@@ -528,8 +557,8 @@ a{text-decoration:none;color:inherit}
         <div class="test-stars">★★★★★</div>
         <p class="test-text">Obrigada Dra, gratidão pela atenção. Adorei que está atendendo por sua conta, fiquei feliz.</p>
         <div class="test-author">
-          <div class="test-avatar">🐾</div>
-          <div><div class="test-name">Glória R.</div><div class="test-pet">Tutora de [pet]</div></div>
+          <div class="testimonial-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H4v7h5c0 4-2 6-5 7M20 5h-6v7h5c0 4-2 6-5 7"/></svg></div>
+          <div><div class="test-name">Glória R.</div><div class="test-pet">Depoimento de tutora</div></div>
         </div>
       </div>
       <div class="test-card fade-up">
@@ -537,8 +566,8 @@ a{text-decoration:none;color:inherit}
         <div class="test-stars">★★★★★</div>
         <p class="test-text">Amei! Muito carinhoso da sua parte! Muito obrigada!</p>
         <div class="test-author">
-          <div class="test-avatar">🐾</div>
-          <div><div class="test-name">Adair Y.</div><div class="test-pet">Tutora de [pet]</div></div>
+          <div class="testimonial-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H4v7h5c0 4-2 6-5 7M20 5h-6v7h5c0 4-2 6-5 7"/></svg></div>
+          <div><div class="test-name">Adair Y.</div><div class="test-pet">Depoimento de tutora</div></div>
         </div>
       </div>
       <div class="test-card fade-up">
@@ -546,8 +575,8 @@ a{text-decoration:none;color:inherit}
         <div class="test-stars">★★★★★</div>
         <p class="test-text">Não tenho palavras que possam expressar a gratidão. Com todo carinho, avaliou e cuidou do meu anjinho.</p>
         <div class="test-author">
-          <div class="test-avatar">🐾</div>
-          <div><div class="test-name">Rose</div><div class="test-pet">Tutora de [pet]</div></div>
+          <div class="testimonial-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H4v7h5c0 4-2 6-5 7M20 5h-6v7h5c0 4-2 6-5 7"/></svg></div>
+          <div><div class="test-name">Rose</div><div class="test-pet">Depoimento de tutora</div></div>
         </div>
       </div>
     </div>
@@ -561,66 +590,60 @@ a{text-decoration:none;color:inherit}
 <section class="wa-test">
   <div class="container">
     <div class="section-tag fade-up">Prova Social</div>
-    <h2 class="section-title fade-up">Conversas que mostram <em>a verdade</em></h2>
-    <p class="section-sub fade-up">Alguns registros reais de mensagens que recebemos dos tutores.</p>
+    <h2 class="section-title fade-up">Carinho que volta em <em>mensagens</em></h2>
+    <p class="section-sub fade-up">Trechos de mensagens recebidas após o atendimento.</p>
     <div class="wa-grid">
 
-      <!-- CARD 1 — Fabi, tutora da Lua -->
+      <!-- CARD 1 — Fabi -->
       <div class="wa-card fade-up">
         <div class="wa-card-header">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-back"><path d="M15 18l-6-6 6-6"/></svg>
-          <div class="wa-avatar">👩</div>
+          <div class="message-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11a8 8 0 0 1-8 8H5l-4 3V11a10 10 0 0 1 20 0Z"/><path d="M6 9h10M6 13h7"/></svg></div>
           <div class="wa-header-info">
             <div class="wa-header-name">Fabi</div>
-            <div class="wa-header-status">online</div>
+            <div class="wa-header-status">Mensagem recebida</div>
           </div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-search"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
         </div>
         <div class="wa-body">
-          <div class="wa-bubble in">Obrigada minha querida, agradeço o carinho e a paciência com a Lua. Você é um amor! <span class="wa-emoji">❤️</span><span class="wa-bubble-time">11:00</span></div>
-          <div class="wa-bubble out">Eu que agradeço Fabi!!! Amei ter conhecido a Lua <span class="wa-emoji">😍</span><span class="wa-bubble-time">11:15 <svg viewBox="0 0 16 11" class="wa-check"><path d="M1 5.5L4.5 9L11 1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 5.5L9 9L15.5 1.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
+          <div class="wa-bubble in">Obrigada minha querida, agradeço o carinho e a paciência […]. Você é um amor! <span class="wa-emoji">❤️</span><span class="wa-bubble-time">11:00</span></div>
+          <div class="wa-bubble out">Eu que agradeço Fabi!!! Amei ter conhecido […] <span class="wa-emoji">😍</span><span class="wa-bubble-time">11:15 <svg viewBox="0 0 16 11" class="wa-check"><path d="M1 5.5L4.5 9L11 1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 5.5L9 9L15.5 1.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
         </div>
-        <div class="wa-footer">Fabi, tutora da Lua</div>
+        <div class="wa-footer">Fabi</div>
       </div>
 
-      <!-- CARD 2 — Renata, tutora da Melzinha -->
+      <!-- CARD 2 — Renata -->
       <div class="wa-card fade-up">
         <div class="wa-card-header">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-back"><path d="M15 18l-6-6 6-6"/></svg>
-          <div class="wa-avatar">👩</div>
+          <div class="message-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11a8 8 0 0 1-8 8H5l-4 3V11a10 10 0 0 1 20 0Z"/><path d="M6 9h10M6 13h7"/></svg></div>
           <div class="wa-header-info">
             <div class="wa-header-name">Renata</div>
-            <div class="wa-header-status">online</div>
+            <div class="wa-header-status">Mensagem recebida</div>
           </div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-search"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
         </div>
         <div class="wa-body">
           <div class="wa-bubble in">Vamos sim doutora. E só temos a agradecer a senhora.<span class="wa-bubble-time">21:51</span></div>
           <div class="wa-bubble out">Eu que agradeço a confiança <span class="wa-emoji">🙏</span><span class="wa-bubble-time">21:52 <svg viewBox="0 0 16 11" class="wa-check"><path d="M1 5.5L4.5 9L11 1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 5.5L9 9L15.5 1.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
         </div>
-        <div class="wa-footer">Renata, tutora da Melzinha</div>
+        <div class="wa-footer">Renata</div>
       </div>
 
-      <!-- CARD 3 — Meire, tutora do Bento -->
+      <!-- CARD 3 — Meire -->
       <div class="wa-card fade-up">
         <div class="wa-card-header">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-back"><path d="M15 18l-6-6 6-6"/></svg>
-          <div class="wa-avatar">👩</div>
+          <div class="message-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11a8 8 0 0 1-8 8H5l-4 3V11a10 10 0 0 1 20 0Z"/><path d="M6 9h10M6 13h7"/></svg></div>
           <div class="wa-header-info">
             <div class="wa-header-name">Meire</div>
-            <div class="wa-header-status">online</div>
+            <div class="wa-header-status">Mensagem recebida</div>
           </div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-search"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
         </div>
         <div class="wa-body">
           <div class="wa-bubble in">Peço a Jesus por você sempre. Que ele te abençoe intensamente. Pessoas como você são raras, minha querida.<span class="wa-bubble-time">22:29</span></div>
-          <div class="wa-bubble in">Beijos tia Ana e lambeijos do Bento <span class="wa-emoji">🐶❤️</span><span class="wa-bubble-time">22:29</span></div>
+          <div class="wa-bubble in">Beijos tia Ana e lambeijos […] <span class="wa-emoji">🐶❤️</span><span class="wa-bubble-time">22:29</span></div>
         </div>
-        <div class="wa-footer">Meire, tutora do Bento</div>
+        <div class="wa-footer">Meire</div>
       </div>
 
     </div>
-    <p class="audio-note">*Nomes e trechos de conversas reais, utilizados com autorização dos tutores.</p>
+    <p class="audio-note">Trechos de conversas, utilizados com autorização. Os nomes dos pets foram omitidos.</p>
   </div>
 </section>
 
@@ -632,13 +655,13 @@ a{text-decoration:none;color:inherit}
     <p class="section-sub fade-up">Depoimentos reais, gravados pela voz de quem já confiou o cuidado do seu pet à Dra. Ana Lucia.</p>
     <div class="audio-grid">
 
-      <!-- CARD DE ÁUDIO 1 — Renata, tutora da Melzinha (áudio real) -->
+      <!-- CARD DE ÁUDIO 1 — Renata (áudio real) -->
       <div class="audio-card fade-up">
         <div class="audio-card-head">
-          <div class="audio-avatar">👩</div>
+          <div class="audio-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4"/></svg></div>
           <div>
             <div class="audio-name">Renata</div>
-            <div class="audio-pet">Tutora da Melzinha</div>
+            <div class="audio-pet">Relato em áudio</div>
           </div>
         </div>
         <div class="audio-player" data-audio-card>
@@ -667,10 +690,10 @@ a{text-decoration:none;color:inherit}
       <!-- CARD DE ÁUDIO 2 — áudio real, nome/pet ainda não confirmados -->
       <div class="audio-card fade-up">
         <div class="audio-card-head">
-          <div class="audio-avatar">🐾</div>
+          <div class="audio-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4"/></svg></div>
           <div>
-            <div class="audio-name">[nome]</div>
-            <div class="audio-pet">Tutor(a) de [pet]</div>
+            <div class="audio-name">Cuidado e dedicação</div>
+            <div class="audio-pet">Relato em áudio</div>
           </div>
         </div>
         <div class="audio-player" data-audio-card>
@@ -699,10 +722,10 @@ a{text-decoration:none;color:inherit}
       <!-- CARD DE ÁUDIO 3 — áudio real, nome/pet ainda não confirmados -->
       <div class="audio-card fade-up">
         <div class="audio-card-head">
-          <div class="audio-avatar">🐾</div>
+          <div class="audio-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4"/></svg></div>
           <div>
-            <div class="audio-name">[nome]</div>
-            <div class="audio-pet">Tutor(a) de [pet]</div>
+            <div class="audio-name">Gratidão pelo atendimento</div>
+            <div class="audio-pet">Relato em áudio</div>
           </div>
         </div>
         <div class="audio-player" data-audio-card>
@@ -729,64 +752,59 @@ a{text-decoration:none;color:inherit}
       </div>
 
     </div>
-    <!-- Cards 2 e 3: áudio real já publicado, nome/pet marcados como [nome]/[pet] até confirmação -->
     <p class="audio-note">*Nomes utilizados com autorização dos tutores.</p>
   </div>
 </section>
 
 <!-- GOOGLE REVIEWS BLOCK -->
-<section class="google-block">
+<section class="google-block" id="avaliacoes-google">
   <div class="container">
     <div class="google-card fade-up">
       <div class="google-left">
         <svg viewBox="0 0 48 48" width="34" height="34"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 8 3l6-6C33.5 6 29 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.1 8 3l6-6C33.5 6 29 4 24 4c-7.7 0-14.4 4.4-17.7 10.7z"/><path fill="#4CAF50" d="M24 44c5 0 9.4-1.9 12.8-5l-6.3-5.3C28.6 35.1 26.4 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.2 4.2-4.1 5.6l6.3 5.3C39.9 36.9 44 31 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
         <div class="google-rating"><span data-google-rating>5,0</span> <span class="stars">★★★★★</span></div>
-        <div class="google-label">Avaliação no Google</div>
-        <!-- EDITAR: número real de avaliações do Google Meu Negócio -->
-        <div class="google-count">Baseado em <span data-google-count>150+</span> avaliações reais</div>
+        <div class="google-label">Nota máxima: 5 de 5</div>
+        <!-- Avaliações informadas pela responsável em setembro de 2026 -->
+        <div class="google-count"><strong data-google-count>25</strong> avaliações no Google</div>
       </div>
       <div class="google-center">
-        <p>A opinião de quem já passou por aqui também está no Google.</p>
-        <!-- EDITAR: substituir "#" pelo link real do perfil do Google Meu Negócio -->
-        <a href="#" class="btn-google" data-google-link target="_blank" rel="noopener">
-          Ver todas as avaliações
+        <h2>O cuidado aparece<br>nas <em>avaliações.</em></h2><p>25 avaliações. Nota 5,0. Conheça a experiência de quem já confiou seu pet à Dra. Ana Lucia.</p>
+        
+        <a href="https://maps.app.goo.gl/oMbY9A8Ha3vzDRPp8" class="btn-google" data-google-link target="_blank" rel="noopener">
+          Ler as avaliações no Google
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
       <div class="google-right">
-        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=500&h=500&fit=crop" alt="Cão e gato juntos, tranquilos" class="google-img">
+        <img src="img/dra-ana-avaliacoes.webp" alt="Dra. Ana Lucia Faleiros acolhendo um cachorro" class="google-img" width="1200" height="1800" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="how">
-  <div class="container" style="text-align:center">
-    <div class="section-tag fade-up">Como funciona</div>
-    <h2 class="section-title fade-up" style="margin:0 auto 8px">Agendar é <em>simples</em></h2>
-    <p class="section-sub fade-up" style="margin:0 auto 0">Três passos para seu pet receber o melhor cuidado.</p>
-    <div class="how-grid">
-      <div class="how-step fade-up">
-        <div class="how-num">1</div>
-        <h3>Envie uma mensagem</h3>
-        <p>Clique no botão de WhatsApp e nos conte o que seu pet precisa. Respondemos rapidinho!</p>
-        <div class="how-connector"></div>
-      </div>
-      <div class="how-step fade-up">
-        <div class="how-num">2</div>
-        <h3>Escolha o melhor horário</h3>
-        <p>Vamos encontrar um horário que funcione para você, com flexibilidade e sem espera.</p>
-        <div class="how-connector"></div>
-      </div>
-      <div class="how-step fade-up">
-        <div class="how-num">3</div>
-        <h3>Atendimento com carinho</h3>
-        <p>Seu pet é atendido com toda a calma e atenção que merece. Sem pressa, sem estresse.</p>
-      </div>
+<section class="how" id="agendar">
+  <div class="container">
+    <div class="section-tag">Como agendar</div>
+    <h2 class="section-title">O próximo passo é uma <em>conversa.</em></h2>
+    <p class="section-sub">Você fala diretamente com a Dra. Ana pelo WhatsApp para combinar o atendimento.</p>
+    <ol class="booking-steps">
+      <li><span class="booking-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11a8 8 0 0 1-8 8H5l-4 3V11a10 10 0 0 1 20 0Z"/><path d="M6 9h10M6 13h7"/></svg></span><span class="booking-number">01</span><h3>Conte o que seu pet precisa</h3><p>Informe se é consulta, vacina ou uma dúvida sobre o atendimento.</p></li>
+      <li><span class="booking-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 11h18M8 16l3 3 5-5"/></svg></span><span class="booking-number">02</span><h3>Combine local e horário</h3><p>Confirme a disponibilidade, o valor e as orientações para a consulta.</p></li>
+      <li><span class="booking-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></span><span class="booking-number">03</span><h3>Pronto para receber cuidado</h3><p>Com o agendamento confirmado, seu pet recebe atenção e você entende os próximos passos.</p></li>
+    </ol>
+    <div class="booking-action">
+      <fieldset><legend>Onde você prefere o atendimento?</legend><div class="booking-options">
+        <label><input type="radio" name="booking-place" value="no consultório" checked><span>No consultório</span></label>
+        <label><input type="radio" name="booking-place" value="em domicílio"><span>Em domicílio</span></label>
+        <label><input type="radio" name="booking-place" value="e quero orientação sobre o local"><span>Ainda não sei</span></label>
+      </div></fieldset>
+      <a class="btn-primary" id="booking-whatsapp" href="https://wa.me/5534999007306?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20no%20consult%C3%B3rio." target="_blank" rel="noopener">Conversar sobre o agendamento <span aria-hidden="true">↗</span></a>
+      <p class="booking-note">Sua preferência vai na mensagem. O agendamento e a disponibilidade são confirmados pelo WhatsApp.</p>
     </div>
   </div>
 </section>
+
 
 <!-- FAQ -->
 <section class="faq" id="faq">
@@ -1026,6 +1044,12 @@ document.querySelectorAll('[data-transcript-btn]').forEach(btn=>{
     btn.firstChild.textContent=isOpen?'Fechar transcrição ':'Ler transcrição ';
   });
 });
+</script>
+<script>
+document.querySelectorAll('input[name="booking-place"]').forEach(input=>input.addEventListener('change',()=>{
+ const choice=document.querySelector('input[name="booking-place"]:checked').value;
+ document.getElementById('booking-whatsapp').href='https://wa.me/5534999007306?text='+encodeURIComponent('Olá! Gostaria de agendar um atendimento '+choice+'.');
+}));
 </script>
 </body>
 </html>
