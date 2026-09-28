@@ -4,7 +4,14 @@
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11436117910"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11436117910');
+</script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dra. Ana Lucia Faleiros | Veterinária a Domicílio em Uberaba</title>
 <meta name="description" content="Veterinária a domicílio em todos os bairros de Uberaba. Consultas para cães e gatos com a Dra. Ana Lucia Faleiros, CRMV-MG 27924. Agende pelo WhatsApp.">
@@ -938,6 +945,8 @@ a{text-decoration:none;color:inherit}
 </a>
 
 <script>
+// Google Ads lead tracking
+ document.querySelectorAll('a[href*="wa.me"]').forEach(link=>{ link.addEventListener('click',()=>{ if(typeof gtag==='function'){ gtag('event','generate_lead',{event_category:'WhatsApp',event_label:'Clique no WhatsApp - Lead',value:200,currency:'BRL'}); } }); });
 // Mobile nav toggle
 function toggleMobileNav(){
   document.querySelector('.nav-links').classList.toggle('open');
@@ -1076,3 +1085,6 @@ document.querySelectorAll('[data-transcript-btn]').forEach(btn=>{
 
 </body>
 </html>
+
+
+
